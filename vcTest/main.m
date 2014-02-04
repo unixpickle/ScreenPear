@@ -11,6 +11,15 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
+        if (argc != 4) {
+            NSLog(@"Usage: %s <index> <width> <height>", argv[0]);
+            return 1;
+        }
+        
+        int index = atoi(argv[1]);
+        int width = atoi(argv[2]);
+        int height = atoi(argv[3]);
+        
         UBConnection * conn = [[UBConnection alloc] init];
         if (![conn open]) {
             NSLog(@"failed to open connection");
@@ -24,27 +33,22 @@ int main(int argc, const char * argv[]) {
         }
         NSLog(@"there are %llu displays.", (unsigned long long)count);
         
-        if (![conn getModeCount:&count atIndex:0]) {
-            NSLog(@"failed to get mode count at index 0");
-            return 1;
-        }
-        NSLog(@"there are %llu modes for display 0.", (unsigned long long)count);
+        UBUserClientResolution resolution;
+        bzero(&resolution, sizeof(resolution));
+        resolution.width = width;
+        resolution.height = height;
         
-        if (![conn setMode:1 forDisplay:0]) {
-            NSLog(@"failed to set mode 1 for display 0");
+        if (![conn setMode:resolution atIndex:index]) {
+            NSLog(@"failed to set mode for display %d", index);
             return 1;
         }
-        NSLog(@"set display mode");
-        if (![conn setEnabled:1 forDisplay:0]) {
-            NSLog(@"failed to set enabled = true for display 0");
-            return 1;
-        }
+        
         NSLog(@"hit enter to disable display again...");
         
         char buffer[512];
         fgets(buffer, 512, stdin);
         
-        if (![conn setEnabled:0 forDisplay:0]) {
+        if (![conn disableAtIndex:index]) {
             NSLog(@"failed to set enabled = false for display 0");
             return 1;
         }

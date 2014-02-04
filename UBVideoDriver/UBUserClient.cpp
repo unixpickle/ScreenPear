@@ -20,9 +20,8 @@ static IOExternalMethodDispatch gMethods[] = {
     {(IOExternalMethodAction)&UBUserClient::gCloseCall, 0, 0, 0, 0},
     {(IOExternalMethodAction)&UBUserClient::gGetCountCall, 0, 0, 1, 0},
     {(IOExternalMethodAction)&UBUserClient::gGetEnabledCall, 1, 0, 1, 0},
-    {(IOExternalMethodAction)&UBUserClient::gGetModeCountCall, 1, 0, 1, 0},
-    {(IOExternalMethodAction)&UBUserClient::gSetModeCall, 2, 0, 0, 0},
-    {(IOExternalMethodAction)&UBUserClient::gSetEnabledCall, 2, 0, 0, 0},
+    {(IOExternalMethodAction)&UBUserClient::gSetModeCall, 1, sizeof(UBUserClientResolution), 0, 0},
+    {(IOExternalMethodAction)&UBUserClient::gDisableCall, 1, 0, 0, 0},
 };
 
 static const int kMethodCount = sizeof(gMethods) / sizeof(IOExternalMethodDispatch);
@@ -122,31 +121,24 @@ IOReturn UBUserClient::gGetEnabledCall(UBUserClient * target, void * reference, 
     return driver->getNub(index)->getEnabled(arguments->scalarOutput);
 }
 
-IOReturn UBUserClient::gGetModeCountCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
-    UBVideoDriver * driver = target->getVideoDriver();
-    if (!driver) return kIOReturnNotAttached;
-    
-    uint32_t index = (uint32_t)arguments->scalarInput[0];
-    if (index >= driver->getNubCount()) return kIOReturnBadArgument;
-    return driver->getNub(index)->getModeCount(arguments->scalarOutput);
-}
-
 IOReturn UBUserClient::gSetModeCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
+    // TODO: somewhere here I should convert the byte order
     UBVideoDriver * driver = target->getVideoDriver();
     if (!driver) return kIOReturnNotAttached;
     
     uint32_t index = (uint32_t)arguments->scalarInput[0];
-    uint64_t mode = arguments->scalarInput[1];
     if (index >= driver->getNubCount()) return kIOReturnBadArgument;
-    return driver->getNub(index)->setModeIndex(mode);
+    UBUserClientResolution resolution;
+    memcpy(&resolution, arguments->structureInput, sizeof(resolution));
+    // TODO: validate the resolution here, somehow
+    return driver->getNub(index)->setMode(resolution);
 }
 
-IOReturn UBUserClient::gSetEnabledCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
+IOReturn UBUserClient::gDisableCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
     UBVideoDriver * driver = target->getVideoDriver();
     if (!driver) return kIOReturnNotAttached;
     
     uint32_t index = (uint32_t)arguments->scalarInput[0];
-    uint64_t flag = arguments->scalarInput[1];
     if (index >= driver->getNubCount()) return kIOReturnBadArgument;
-    return driver->getNub(index)->setEnabled((bool)flag);
+    return driver->getNub(index)->disable();
 }

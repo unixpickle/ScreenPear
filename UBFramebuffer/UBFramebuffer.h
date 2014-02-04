@@ -9,39 +9,45 @@
 class UBFramebuffer : public IOFramebuffer {
     OSDeclareDefaultStructors(UBFramebuffer);
     
-private:
-    // TODO: use an IOLock here to make sure sync issues don't occur
-    
+private:    
     // state
     bool isEnabled;
-    IODisplayModeID currentDisplayMode;
-	IOIndex currentDepth;
+    IODisplayModeInformation currentMode;
+    UInt32 maximumSize;
 	UInt32 powerState;
     
     // persistent
     IOBufferMemoryDescriptor * buffer;
+    IOLock * lock;
+    
+    // utility
+    static IOReturn calculateFramebufferSize(IODisplayModeInformation info, UInt32 * sizeOut);
+    static IOReturn calculatePixelInformation(IODisplayModeInformation info, IOPixelInformation * pixelInfo);
     
 public:
     // control
-    virtual void setEnabled(bool flag);
-    virtual bool getEnabled() const;
-    virtual IOBufferMemoryDescriptor * getBuffer() const;
+    virtual IOReturn enableWithState(IODisplayModeInformation info);
+    virtual IOReturn disable();
+    virtual bool getIsEnabled();
+    virtual IOBufferMemoryDescriptor * getBuffer();
     
     // initialization
+    virtual bool init(OSDictionary * dict = 0);
     virtual bool start(IOService * provider);
-    virtual void stop(IOService * provider);
     virtual IOReturn enableController();
+    
+    // deinitialization
+    virtual void stop(IOService * provider);
+    virtual void free();
     
     // pixel formats
     virtual const char * getPixelFormats();
 	virtual IOReturn getInformationForDisplayMode(IODisplayModeID mode, IODisplayModeInformation * info);
 	virtual UInt64 getPixelFormatsForDisplayMode(IODisplayModeID mode, IOIndex depth);
 	virtual IOReturn getPixelInformation(IODisplayModeID mode, IOIndex depth, IOPixelAperture aperature, IOPixelInformation * info);
-    virtual bool isConsoleDevice();
     
     // memory
 	virtual IODeviceMemory * getVRAMRange();
-    virtual UInt32 getApertureSize(IODisplayModeID mode, IOIndex depth);
     virtual IODeviceMemory * getApertureRange(IOPixelAperture aperature);
 	
     // general attributes
@@ -53,7 +59,7 @@ public:
 	virtual IOReturn getAttributeForConnection(IOIndex index, IOSelect sel, uintptr_t * valueOut);
 	virtual IOReturn setAttributeForConnection(IOIndex index, IOSelect sel, uintptr_t value);
 	
-    // display modes
+    // display modes, just return the current mode
 	virtual IOItemCount getDisplayModeCount();
 	virtual IOReturn getDisplayModes(IODisplayModeID * modes);
 	virtual IOReturn setDisplayMode(IODisplayModeID mode, IOIndex depth);

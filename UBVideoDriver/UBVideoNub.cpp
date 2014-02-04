@@ -14,48 +14,44 @@ bool UBVideoNub::init(OSDictionary * dict) {
     return true;
 }
 
-IOReturn UBVideoNub::getModeCount(uint64_t * count) {
-    if (!count) return kIOReturnBadArgument;
-    GETFB;
-    
-    *count = (uint64_t)fb->getDisplayModeCount();
-    
-    return kIOReturnSuccess;
-}
+#pragma mark - Getters -
 
 IOReturn UBVideoNub::getEnabled(uint64_t * enabled) {
     if (!enabled) return kIOReturnBadArgument;
     GETFB;
     
-    *enabled = (uint64_t)fb->getEnabled();
+    *enabled = (uint64_t)fb->getIsEnabled();
     
-    return kIOReturnSuccess;
-}
-
-IOReturn UBVideoNub::setModeIndex(uint64_t index) {
-    GETFB;
-    
-    uint64_t count;
-    IOReturn err;
-    if ((err = getModeCount(&count)) != kIOReturnSuccess) {
-        return err;
-    }
-    if (index >= count) return kIOReturnBadArgument;
-    
-    return fb->setDisplayMode((uint32_t)index + 1, 0);
-}
-
-IOReturn UBVideoNub::setEnabled(bool flag) {
-    GETFB;
-    fb->setEnabled(flag);
     return kIOReturnSuccess;
 }
 
 IOReturn UBVideoNub::getFramebufferMemory(IOMemoryDescriptor ** output) {
     GETFB;
     if (!output) return kIOReturnBadArgument;
-    *output = fb->getBuffer();
-    if (!*output) return kIOReturnNotReady;
+    output[0] = fb->getBuffer();
+    if (!output[0]) return kIOReturnNotReady;
     return kIOReturnSuccess;
+}
+
+#pragma mark - Setters -
+
+IOReturn UBVideoNub::setMode(UBUserClientResolution resolution) {
+    GETFB;
+    
+    IODisplayModeInformation info;
+    bzero(&info, sizeof(info));
+    info.imageWidth = resolution.imageWidth;
+    info.imageHeight = resolution.imageHeight;
+    info.nominalWidth = resolution.width;
+    info.nominalHeight = resolution.height;
+    info.flags = kDisplayModeValidFlag;
+    info.refreshRate = 60 << 16;
+    return fb->enableWithState(info);
+}
+
+IOReturn UBVideoNub::disable() {
+    GETFB;
+    
+    return fb->disable();
 }
 

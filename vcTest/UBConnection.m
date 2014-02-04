@@ -62,24 +62,16 @@
     return ret == kIOReturnSuccess;
 }
 
-- (BOOL)getModeCount:(uint64_t *)count atIndex:(uint64_t)index {
-    uint32_t expected = 1;
-    IOReturn ret =  IOConnectCallMethod(self.connect, kUBUserClientCommandGetModeCount, &index, 1, NULL,
-                                        0, count, &expected, NULL, NULL);
-    return ret == kIOReturnSuccess;
-}
-
-- (BOOL)setMode:(uint64_t)mode forDisplay:(uint64_t)index {
-    uint64_t input[3] = {index, mode};
+- (BOOL)setMode:(UBUserClientResolution)resolution atIndex:(uint64_t)index {
     IOReturn ret = IOConnectCallMethod(self.connect, kUBUserClientCommandSetMode,
-                                       input, 2, NULL, 0, NULL, 0, 0, 0);
+                                       &index, 1, &resolution, sizeof(resolution),
+                                       NULL, NULL, NULL, NULL);
     return ret == kIOReturnSuccess;
 }
 
-- (BOOL)setEnabled:(uint64_t)enabled forDisplay:(uint64_t)index {
-    uint64_t input[2] = {index, enabled};
-    IOReturn ret = IOConnectCallMethod(self.connect, kUBUserClientCommandSetEnabled,
-                                       input, 2, NULL, 0, NULL, NULL, NULL, NULL);
+- (BOOL)disableAtIndex:(uint64_t)index {
+    IOReturn ret = IOConnectCallMethod(self.connect, kUBUserClientCommandDisable,
+                                       &index, 1, NULL, 0, NULL, NULL, NULL, NULL);
     return ret == kIOReturnSuccess;
 }
 

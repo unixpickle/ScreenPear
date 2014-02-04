@@ -33,7 +33,6 @@ public:
     static IOReturn gCloseCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
     static IOReturn gGetCountCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
     static IOReturn gGetEnabledCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
-    static IOReturn gGetModeCountCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
     static IOReturn gSetModeCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
-    static IOReturn gSetEnabledCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
+    static IOReturn gDisableCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
 };
