@@ -21,7 +21,7 @@ static IOExternalMethodDispatch gMethods[] = {
     {(IOExternalMethodAction)&UBUserClient::gGetCountCall, 0, 0, 1, 0},
     {(IOExternalMethodAction)&UBUserClient::gGetEnabledCall, 1, 0, 1, 0},
     {(IOExternalMethodAction)&UBUserClient::gGetModeCountCall, 1, 0, 1, 0},
-    {(IOExternalMethodAction)&UBUserClient::gSetModeCall, 3, 0, 0, 0},
+    {(IOExternalMethodAction)&UBUserClient::gSetModeCall, 2, 0, 0, 0},
     {(IOExternalMethodAction)&UBUserClient::gSetEnabledCall, 2, 0, 0, 0},
 };
 
@@ -137,9 +137,8 @@ IOReturn UBUserClient::gSetModeCall(UBUserClient * target, void * reference, IOE
     
     uint32_t index = (uint32_t)arguments->scalarInput[0];
     uint64_t mode = arguments->scalarInput[1];
-    uint64_t depth = arguments->scalarInput[2];
     if (index >= driver->getNubCount()) return kIOReturnBadArgument;
-    return driver->getNub(index)->setModeIndex(mode, depth);
+    return driver->getNub(index)->setModeIndex(mode);
 }
 
 IOReturn UBUserClient::gSetEnabledCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {

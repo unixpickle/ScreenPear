@@ -18,7 +18,7 @@
 - (BOOL)getCount:(uint64_t *)count;
 - (BOOL)getEnabled:(uint64_t *)flag atIndex:(uint64_t)index;
 - (BOOL)getModeCount:(uint64_t *)count atIndex:(uint64_t)index;
-- (BOOL)setMode:(uint64_t)mode withDepth:(uint64_t)depth forDisplay:(uint64_t)index;
+- (BOOL)setMode:(uint64_t)mode forDisplay:(uint64_t)index;
 - (BOOL)setEnabled:(uint64_t)index forDisplay:(uint64_t)index;
 
 @end

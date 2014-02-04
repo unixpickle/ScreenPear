@@ -11,7 +11,7 @@ public:
     virtual IOReturn getModeCount(uint64_t * count);
     virtual IOReturn getEnabled(uint64_t * enabled);
     
-    virtual IOReturn setModeIndex(uint64_t index, uint64_t depth);
+    virtual IOReturn setModeIndex(uint64_t index);
     virtual IOReturn setEnabled(bool flag);
     
     virtual IOReturn getFramebufferMemory(IOMemoryDescriptor ** output);

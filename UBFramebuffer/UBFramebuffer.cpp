@@ -4,9 +4,6 @@
 
 OSDefineMetaClassAndStructors(UBFramebuffer, super);
 
-#define kDepth8Bit 0
-#define kDepth16Bit 1
-#define kDepth32Bit 2
 #define kIOPMIsPowerManagedKey "IOPMIsPowerManaged"
 
 enum {
@@ -19,35 +16,35 @@ static const IODisplayModeInformation gDisplayModes[] = {
 	{0, 0, 0, 0, 0}, // padding for 1-start-index
 	
     // 16:9, from http://pacoup.com/2011/06/12/list-of-true-169-resolutions/
-    {640, 360, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {768, 432, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {896, 504, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {640, 360, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1024, 576, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1152, 648, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1280, 720, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1408, 792, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1536, 864, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1664, 936, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1792, 1008, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1920, 1080, 60 << 16, kDepth32Bit, kDisplayModeValidFlag}, // 1080p
-    {2560, 1440, 60 << 16, kDepth32Bit, kDisplayModeValidFlag}, // 27" TV
-    {3840, 2160, 60 << 16, kDepth32Bit, kDisplayModeValidFlag}, // 4k
+    {640, 360, 60 << 16, 0, kDisplayModeValidFlag},
+    {768, 432, 60 << 16, 0, kDisplayModeValidFlag},
+    {896, 504, 60 << 16, 0, kDisplayModeValidFlag},
+    {640, 360, 60 << 16, 0, kDisplayModeValidFlag},
+    {1024, 576, 60 << 16, 0, kDisplayModeValidFlag},
+    {1152, 648, 60 << 16, 0, kDisplayModeValidFlag},
+    {1280, 720, 60 << 16, 0, kDisplayModeValidFlag},
+    {1408, 792, 60 << 16, 0, kDisplayModeValidFlag},
+    {1536, 864, 60 << 16, 0, kDisplayModeValidFlag},
+    {1664, 936, 60 << 16, 0, kDisplayModeValidFlag},
+    {1792, 1008, 60 << 16, 0, kDisplayModeValidFlag},
+    {1920, 1080, 60 << 16, 0, kDisplayModeValidFlag}, // 1080p
+    {2560, 1440, 60 << 16, 0, kDisplayModeValidFlag}, // 27" TV
+    {3840, 2160, 60 << 16, 0, kDisplayModeValidFlag}, // 4k
     
     // 16:10
-    {1280, 800, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1440, 900, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1680, 1050, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {1920, 1200, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
-    {2560, 1600, 60 << 16, kDepth32Bit, kDisplayModeValidFlag},
+    {1280, 800, 60 << 16, 0, kDisplayModeValidFlag},
+    {1440, 900, 60 << 16, 0, kDisplayModeValidFlag},
+    {1680, 1050, 60 << 16, 0, kDisplayModeValidFlag},
+    {1920, 1200, 60 << 16, 0, kDisplayModeValidFlag},
+    {2560, 1600, 60 << 16, 0, kDisplayModeValidFlag},
     
     // this is what I'll call the NULL display
-	{0, 0, 60 << 16, kDepth32Bit, kDisplayModeValidFlag | kDisplayModeAlwaysShowFlag}
+	{0, 0, 60 << 16, 0, kDisplayModeValidFlag | kDisplayModeAlwaysShowFlag}
 };
 
 #define kDisplayModesCount sizeof(gDisplayModes) / sizeof(IODisplayModeInformation) - 1
 #define kLargestDisplayMode 14
-#define kStartupDisplayMode 10
+#define kStartupDisplayMode 1
 
 #pragma mark - Control -
 
@@ -77,7 +74,7 @@ bool UBFramebuffer::start(IOService * provider) {
     setLocation(location);
 	
 	currentDisplayMode = kStartupDisplayMode;
-	currentDepth = kDepth32Bit;
+	currentDepth = 0;
 	buffer = NULL;
     
     IOLog("UBFramebuffer::start - returning\n");
@@ -112,7 +109,7 @@ IOReturn UBFramebuffer::enableController() {
 	getProvider()->setProperty(kIOPMIsPowerManagedKey, true);
     
     // configure framebuffer
-    UInt32 bufferSize = getApertureSize(kLargestDisplayMode, kDepth32Bit);
+    UInt32 bufferSize = getApertureSize(kLargestDisplayMode, 0);
 	IOLog("%s: attempting to allocate %d bytes\n", getMetaClass()->getClassName(), bufferSize);
 	buffer = IOBufferMemoryDescriptor::withOptions(kIODirectionInOut | kIOMemoryKernelUserShared, bufferSize, page_size);
 	if (!buffer) {
@@ -136,7 +133,7 @@ IOReturn UBFramebuffer::getInformationForDisplayMode(IODisplayModeID mode, IODis
 	bzero(info, sizeof(*info));
 	
     IODisplayModeInformation modeInfo = gDisplayModes[mode];
-	info->maxDepthIndex	= kDepth32Bit;
+	info->maxDepthIndex	= 0;
 	info->nominalWidth = modeInfo.nominalWidth;
 	info->nominalHeight	= modeInfo.nominalHeight;
 	info->refreshRate = modeInfo.refreshRate;
@@ -155,45 +152,25 @@ IOReturn UBFramebuffer::getPixelInformation(IODisplayModeID mode,
                                             IOPixelAperture aperature,
                                             IOPixelInformation * info) {
     IOLog("UBFramebuffer::getPixelInformation()\n");
-    if (info == NULL) return kIOReturnBadArgument;
+    if (info == NULL) {
+        IOLog("UBFramebuffer::getPixelInformation() - bad argument\n");
+        return kIOReturnBadArgument;
+    }
 	
     bzero(info, sizeof(*info));
     
     IODisplayModeInformation modeInfo = gDisplayModes[mode];
 	info->activeWidth = modeInfo.nominalWidth;
 	info->activeHeight = modeInfo.nominalHeight;
-	
-	switch (depth) {
-		case kDepth8Bit:
-			strncpy(info->pixelFormat, IO8BitIndexedPixels, sizeof(IOPixelEncoding));
-			info->pixelType = kIOCLUTPixels;
-			info->componentMasks[0] = 0xff;
-			info->bitsPerPixel = 8;
-			info->componentCount = 1;
-			info->bitsPerComponent = 8;
-			break;
-		case kDepth16Bit:
-            strncpy(info->pixelFormat, IO16BitDirectPixels, sizeof(IOPixelEncoding));
-			info->pixelType = kIORGBDirectPixels;
-			info->componentMasks[0] = 0x7c00;
-			info->componentMasks[1] = 0x03e0;
-			info->componentMasks[2] = 0x001f;
-			info->bitsPerPixel = 16;
-			info->componentCount = 3;
-			info->bitsPerComponent = 5;
-			break;
-		case kDepth32Bit:
-		default:
-            strncpy(info->pixelFormat, IO32BitDirectPixels, sizeof(IOPixelEncoding));
-			info->pixelType = kIORGBDirectPixels;
-			info->componentMasks[0] = 0x00FF0000;
-			info->componentMasks[1] = 0x0000FF00;
-			info->componentMasks[2] = 0x000000FF;
-			info->bitsPerPixel = 32;
-			info->componentCount = 3;
-			info->bitsPerComponent = 8;
-	}
-	
+    IOLog("UBFramebuffer::getPixelInformation() - width: %u, height: %u\n", info->activeWidth, info->activeHeight);
+    strncpy(info->pixelFormat, IO32BitDirectPixels, sizeof(IOPixelEncoding));
+	info->pixelType = kIORGBDirectPixels;
+	info->componentMasks[0] = 0x00FF0000;
+	info->componentMasks[1] = 0x0000FF00;
+	info->componentMasks[2] = 0x000000FF;
+	info->bitsPerPixel = 32;
+	info->componentCount = 3;
+    info->bitsPerComponent = 8;
 	info->bytesPerRow = (info->activeWidth * info->bitsPerPixel / 8) + 32;		// 32 byte row header?
     
     return kIOReturnSuccess;
@@ -345,7 +322,7 @@ IOReturn UBFramebuffer::getDisplayModes(IODisplayModeID * modes) {
 IOReturn UBFramebuffer::setDisplayMode(IODisplayModeID mode, IOIndex depth) {
     IOLog("UBFramebuffer::setDisplayMode()\n");
     if (mode > kDisplayModesCount || mode < 1) return kIOReturnBadArgument;
-    if (depth < 0 || depth > 2) return kIOReturnBadArgument;
+    if (depth != 0) return kIOReturnBadArgument;
     
     currentDisplayMode = mode;
 	currentDepth = depth;

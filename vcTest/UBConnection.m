@@ -69,10 +69,10 @@
     return ret == kIOReturnSuccess;
 }
 
-- (BOOL)setMode:(uint64_t)mode withDepth:(uint64_t)depth forDisplay:(uint64_t)index {
-    uint64_t input[3] = {index, mode, depth};
+- (BOOL)setMode:(uint64_t)mode forDisplay:(uint64_t)index {
+    uint64_t input[3] = {index, mode};
     IOReturn ret = IOConnectCallMethod(self.connect, kUBUserClientCommandSetMode,
-                                       input, 3, NULL, 0, NULL, 0, 0, 0);
+                                       input, 2, NULL, 0, NULL, 0, 0, 0);
     return ret == kIOReturnSuccess;
 }
 

@@ -32,8 +32,7 @@ IOReturn UBVideoNub::getEnabled(uint64_t * enabled) {
     return kIOReturnSuccess;
 }
 
-IOReturn UBVideoNub::setModeIndex(uint64_t index, uint64_t depth) {
-    if (depth > 2) return kIOReturnBadArgument;
+IOReturn UBVideoNub::setModeIndex(uint64_t index) {
     GETFB;
     
     uint64_t count;
@@ -43,7 +42,7 @@ IOReturn UBVideoNub::setModeIndex(uint64_t index, uint64_t depth) {
     }
     if (index >= count) return kIOReturnBadArgument;
     
-    return fb->setDisplayMode((uint32_t)index + 1, (uint32_t)depth);
+    return fb->setDisplayMode((uint32_t)index + 1, 0);
 }
 
 IOReturn UBVideoNub::setEnabled(bool flag) {

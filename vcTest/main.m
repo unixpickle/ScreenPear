@@ -30,8 +30,8 @@ int main(int argc, const char * argv[]) {
         }
         NSLog(@"there are %llu modes for display 0.", (unsigned long long)count);
         
-        if (![conn setMode:10 withDepth:2 forDisplay:0]) {
-            NSLog(@"failed to set mode 10 with depth 2 for display 0");
+        if (![conn setMode:1 forDisplay:0]) {
+            NSLog(@"failed to set mode 1 for display 0");
             return 1;
         }
         NSLog(@"set display mode");
