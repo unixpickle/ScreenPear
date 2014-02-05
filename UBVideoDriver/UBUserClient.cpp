@@ -16,8 +16,6 @@ OSDefineMetaClassAndStructors(UBUserClient, super);
  };
  */
 static IOExternalMethodDispatch gMethods[] = {
-    {(IOExternalMethodAction)&UBUserClient::gOpenCall, 0, 0, 0, 0},
-    {(IOExternalMethodAction)&UBUserClient::gCloseCall, 0, 0, 0, 0},
     {(IOExternalMethodAction)&UBUserClient::gGetCountCall, 0, 0, 1, 0},
     {(IOExternalMethodAction)&UBUserClient::gGetEnabledCall, 1, 0, 1, 0},
     {(IOExternalMethodAction)&UBUserClient::gSetModeCall, 1, sizeof(UBUserClientResolution), 0, 0},
@@ -32,27 +30,12 @@ bool UBUserClient::initWithTask(task_t owningTask, void * security_id, UInt32 ty
     return true;
 }
 
-IOReturn UBUserClient::open() {
-    if (!getProvider()) return kIOReturnNotAttached;
-    if (!getProvider()->open(this)) return kIOReturnExclusiveAccess;
-    return kIOReturnSuccess;
-}
-
-IOReturn UBUserClient::close() {
-    if (!getProvider()) return kIOReturnNotAttached;
-    if (getProvider()->isOpen(this)) {
-        getProvider()->close(this);
-    }
-    return kIOReturnSuccess;
-}
-
 void UBUserClient::stop(IOService * provider) {
     super::stop(provider);
 }
 
 bool UBUserClient::start(IOService * provider) {
     if (!super::start(provider)) return false;
-    setName("UBUserClient");
     return true;
 }
 
@@ -66,7 +49,6 @@ IOReturn UBUserClient::message(UInt32 type, IOService * provider, void * argumen
 }
 
 IOReturn UBUserClient::clientClose(void) {
-    close();
     task = NULL;
     return terminate();
 }
@@ -95,14 +77,6 @@ IOReturn UBUserClient::clientMemoryForType(UInt32 type,
     if (!driver) return kIOReturnNotAttached;
     if (type >= driver->getNubCount()) return kIOReturnBadArgument;
     return driver->getNub(type)->getFramebufferMemory(memory);
-}
-
-IOReturn UBUserClient::gOpenCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
-    return target->open();
-}
-
-IOReturn UBUserClient::gCloseCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
-    return target->close();
 }
 
 IOReturn UBUserClient::gGetCountCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {

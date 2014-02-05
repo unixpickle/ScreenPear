@@ -30,6 +30,7 @@ IOReturn UBVideoNub::getFramebufferMemory(IOMemoryDescriptor ** output) {
     if (!output) return kIOReturnBadArgument;
     output[0] = fb->getBuffer();
     if (!output[0]) return kIOReturnNotReady;
+    output[0]->retain();
     return kIOReturnSuccess;
 }
 

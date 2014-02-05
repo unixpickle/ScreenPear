@@ -22,6 +22,8 @@
 		FA2A7C1818A03D6C00FDA6BF /* vcTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2A7C1718A03D6C00FDA6BF /* vcTest.1 */; };
 		FA2A7C1E18A03D7E00FDA6BF /* UBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A7C1D18A03D7E00FDA6BF /* UBConnection.m */; };
 		FA2A7C2018A0422000FDA6BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
+		FA9AB91318A2B02100B0FCBD /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
+		FA9AB91418A2B56A00B0FCBD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
 		FAC7097918A1A1B2001F60A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC7097818A1A1B2001F60A6 /* Cocoa.framework */; };
 		FAC7098218A1A1B2001F60A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAC7098018A1A1B2001F60A6 /* InfoPlist.strings */; };
 		FAC7098418A1A1B2001F60A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7098318A1A1B2001F60A6 /* main.m */; };
@@ -72,6 +74,8 @@
 		FA2A7C1C18A03D7E00FDA6BF /* UBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBConnection.h; sourceTree = "<group>"; };
 		FA2A7C1D18A03D7E00FDA6BF /* UBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBConnection.m; sourceTree = "<group>"; };
 		FA2A7C1F18A0422000FDA6BF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBDisplaySocket.h; sourceTree = "<group>"; };
+		FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBDisplaySocket.m; sourceTree = "<group>"; };
 		FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmbilicalControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC7097818A1A1B2001F60A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FAC7097A18A1A1B2001F60A6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -117,6 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA9AB91418A2B56A00B0FCBD /* IOKit.framework in Frameworks */,
 				FAC7097918A1A1B2001F60A6 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -220,6 +225,8 @@
 			isa = PBXGroup;
 			children = (
 				FA2A7C0018A029F500FDA6BF /* UBUserClientShared.h */,
+				FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */,
+				FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -498,6 +505,7 @@
 			files = (
 				FAC7098418A1A1B2001F60A6 /* main.m in Sources */,
 				FAC7098B18A1A1B2001F60A6 /* UBAppDelegate.m in Sources */,
+				FA9AB91318A2B02100B0FCBD /* UBDisplaySocket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -855,10 +863,10 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "UmbilicalControl/UmbilicalControl-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -894,9 +902,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "UmbilicalControl/UmbilicalControl-Info.plist";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = macosx10.8;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -947,6 +955,7 @@
 				FAC709A418A1A1B2001F60A6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

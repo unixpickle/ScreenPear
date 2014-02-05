@@ -2,8 +2,6 @@
 #define Umbilical_UBUserClientShared_H
 
 typedef enum {
-    kUBUserClientCommandOpen,
-    kUBUserClientCommandClose,
     kUBUserClientCommandGetCount,
     kUBUserClientCommandGetEnabled,
     kUBUserClientCommandSetMode,
