@@ -63,5 +63,5 @@ public:
 	virtual IOItemCount getDisplayModeCount();
 	virtual IOReturn getDisplayModes(IODisplayModeID * modes);
 	virtual IOReturn setDisplayMode(IODisplayModeID mode, IOIndex depth);
-	virtual IOReturn getCurrentDisplayMode(IODisplayModeID * modeOut, IOIndex * depthOut);
+	virtual IOReturn getCurrentDisplayMode(IODisplayModeID * modeOut, IOIndex * depthOut);    
 };

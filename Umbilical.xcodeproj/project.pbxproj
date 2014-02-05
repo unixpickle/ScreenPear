@@ -22,6 +22,13 @@
 		FA2A7C1818A03D6C00FDA6BF /* vcTest.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = FA2A7C1718A03D6C00FDA6BF /* vcTest.1 */; };
 		FA2A7C1E18A03D7E00FDA6BF /* UBConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2A7C1D18A03D7E00FDA6BF /* UBConnection.m */; };
 		FA2A7C2018A0422000FDA6BF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
+		FAC7097918A1A1B2001F60A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC7097818A1A1B2001F60A6 /* Cocoa.framework */; };
+		FAC7098218A1A1B2001F60A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAC7098018A1A1B2001F60A6 /* InfoPlist.strings */; };
+		FAC7098418A1A1B2001F60A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7098318A1A1B2001F60A6 /* main.m */; };
+		FAC7098818A1A1B2001F60A6 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FAC7098618A1A1B2001F60A6 /* Credits.rtf */; };
+		FAC7098B18A1A1B2001F60A6 /* UBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7098A18A1A1B2001F60A6 /* UBAppDelegate.m */; };
+		FAC7098E18A1A1B2001F60A6 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAC7098C18A1A1B2001F60A6 /* MainMenu.xib */; };
+		FAC7099018A1A1B2001F60A6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC7098F18A1A1B2001F60A6 /* Images.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +72,21 @@
 		FA2A7C1C18A03D7E00FDA6BF /* UBConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBConnection.h; sourceTree = "<group>"; };
 		FA2A7C1D18A03D7E00FDA6BF /* UBConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBConnection.m; sourceTree = "<group>"; };
 		FA2A7C1F18A0422000FDA6BF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmbilicalControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC7097818A1A1B2001F60A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FAC7097A18A1A1B2001F60A6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		FAC7097B18A1A1B2001F60A6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FAC7097C18A1A1B2001F60A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAC7097F18A1A1B2001F60A6 /* UmbilicalControl-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UmbilicalControl-Info.plist"; sourceTree = "<group>"; };
+		FAC7098118A1A1B2001F60A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAC7098318A1A1B2001F60A6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAC7098518A1A1B2001F60A6 /* UmbilicalControl-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UmbilicalControl-Prefix.pch"; sourceTree = "<group>"; };
+		FAC7098718A1A1B2001F60A6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FAC7098918A1A1B2001F60A6 /* UBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBAppDelegate.h; sourceTree = "<group>"; };
+		FAC7098A18A1A1B2001F60A6 /* UBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UBAppDelegate.m; sourceTree = "<group>"; };
+		FAC7098D18A1A1B2001F60A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FAC7098F18A1A1B2001F60A6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FAC7099618A1A1B2001F60A6 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +113,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAC7097418A1A1B2001F60A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC7097918A1A1B2001F60A6 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -102,6 +132,7 @@
 				FA2A7BD418A013C800FDA6BF /* UBFramebuffer */,
 				FA2A7BEA18A01C3600FDA6BF /* UBVideoDriver */,
 				FA2A7C1218A03D6C00FDA6BF /* vcTest */,
+				FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */,
 				FA2A7BD118A013C800FDA6BF /* Frameworks */,
 				FA2A7BD018A013C800FDA6BF /* Products */,
 			);
@@ -113,6 +144,7 @@
 				FA2A7BCF18A013C800FDA6BF /* UBFramebuffer.kext */,
 				FA2A7BE918A01C3600FDA6BF /* UBVideoDriver.kext */,
 				FA2A7C0F18A03D6C00FDA6BF /* vcTest */,
+				FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -122,6 +154,8 @@
 			children = (
 				FA2A7C1F18A0422000FDA6BF /* IOKit.framework */,
 				FA2A7C1018A03D6C00FDA6BF /* Foundation.framework */,
+				FAC7097818A1A1B2001F60A6 /* Cocoa.framework */,
+				FAC7099618A1A1B2001F60A6 /* XCTest.framework */,
 				FA2A7BD218A013C800FDA6BF /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -131,6 +165,9 @@
 			isa = PBXGroup;
 			children = (
 				FA2A7BD318A013C800FDA6BF /* Kernel.framework */,
+				FAC7097A18A1A1B2001F60A6 /* AppKit.framework */,
+				FAC7097B18A1A1B2001F60A6 /* CoreData.framework */,
+				FAC7097C18A1A1B2001F60A6 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
@@ -231,6 +268,30 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */ = {
+			isa = PBXGroup;
+			children = (
+				FAC7098918A1A1B2001F60A6 /* UBAppDelegate.h */,
+				FAC7098A18A1A1B2001F60A6 /* UBAppDelegate.m */,
+				FAC7098C18A1A1B2001F60A6 /* MainMenu.xib */,
+				FAC7098F18A1A1B2001F60A6 /* Images.xcassets */,
+				FAC7097E18A1A1B2001F60A6 /* Supporting Files */,
+			);
+			path = UmbilicalControl;
+			sourceTree = "<group>";
+		};
+		FAC7097E18A1A1B2001F60A6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAC7097F18A1A1B2001F60A6 /* UmbilicalControl-Info.plist */,
+				FAC7098018A1A1B2001F60A6 /* InfoPlist.strings */,
+				FAC7098318A1A1B2001F60A6 /* main.m */,
+				FAC7098518A1A1B2001F60A6 /* UmbilicalControl-Prefix.pch */,
+				FAC7098618A1A1B2001F60A6 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -310,6 +371,23 @@
 			productReference = FA2A7C0F18A03D6C00FDA6BF /* vcTest */;
 			productType = "com.apple.product-type.tool";
 		};
+		FAC7097618A1A1B2001F60A6 /* UmbilicalControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC709A718A1A1B2001F60A6 /* Build configuration list for PBXNativeTarget "UmbilicalControl" */;
+			buildPhases = (
+				FAC7097318A1A1B2001F60A6 /* Sources */,
+				FAC7097418A1A1B2001F60A6 /* Frameworks */,
+				FAC7097518A1A1B2001F60A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UmbilicalControl;
+			productName = UmbilicalControl;
+			productReference = FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -324,6 +402,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = FA2A7BC218A0138200FDA6BF;
 			productRefGroup = FA2A7BD018A013C800FDA6BF /* Products */;
@@ -333,6 +412,7 @@
 				FA2A7BCE18A013C800FDA6BF /* UBFramebuffer */,
 				FA2A7BE818A01C3600FDA6BF /* UBVideoDriver */,
 				FA2A7C0E18A03D6C00FDA6BF /* vcTest */,
+				FAC7097618A1A1B2001F60A6 /* UmbilicalControl */,
 			);
 		};
 /* End PBXProject section */
@@ -351,6 +431,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2A7BEF18A01C3600FDA6BF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC7097518A1A1B2001F60A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC7098218A1A1B2001F60A6 /* InfoPlist.strings in Resources */,
+				FAC7099018A1A1B2001F60A6 /* Images.xcassets in Resources */,
+				FAC7098818A1A1B2001F60A6 /* Credits.rtf in Resources */,
+				FAC7098E18A1A1B2001F60A6 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +492,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FAC7097318A1A1B2001F60A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC7098418A1A1B2001F60A6 /* main.m in Sources */,
+				FAC7098B18A1A1B2001F60A6 /* UBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -418,6 +518,30 @@
 				FA2A7BEE18A01C3600FDA6BF /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FAC7098018A1A1B2001F60A6 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC7098118A1A1B2001F60A6 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FAC7098618A1A1B2001F60A6 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC7098718A1A1B2001F60A6 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		FAC7098C18A1A1B2001F60A6 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAC7098D18A1A1B2001F60A6 /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -695,6 +819,88 @@
 			};
 			name = Release;
 		};
+		FAC709A318A1A1B2001F60A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UmbilicalControl/UmbilicalControl-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "UmbilicalControl/UmbilicalControl-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FAC709A418A1A1B2001F60A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UmbilicalControl/UmbilicalControl-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "UmbilicalControl/UmbilicalControl-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -733,6 +939,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FAC709A718A1A1B2001F60A6 /* Build configuration list for PBXNativeTarget "UmbilicalControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC709A318A1A1B2001F60A6 /* Debug */,
+				FAC709A418A1A1B2001F60A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

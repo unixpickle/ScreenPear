@@ -6,6 +6,8 @@ OSDefineMetaClassAndStructors(UBFramebuffer, super);
 
 #define kIOPMIsPowerManagedKey "IOPMIsPowerManaged"
 
+static const char * getSelectorString(IOSelect sel);
+
 enum {
 	kUBSleepState = 0,
 	kUBDozeState = 1,
@@ -182,6 +184,7 @@ IODeviceMemory * UBFramebuffer::getApertureRange(IOPixelAperture aperature) {
 #pragma mark - General Attributes -
 
 IOReturn UBFramebuffer::getAttribute(IOSelect sel, uintptr_t * valueOut) {
+    IOLog("UBFramebuffer::getAttribute(%s, %p)\n", getSelectorString(sel), valueOut);
     if (!valueOut) return kIOReturnBadArgument;
 	switch (sel) {
 		case kIOHardwareCursorAttribute:
@@ -201,11 +204,12 @@ IOReturn UBFramebuffer::getAttribute(IOSelect sel, uintptr_t * valueOut) {
 }
 
 IOReturn UBFramebuffer::setAttribute(IOSelect sel, uintptr_t value) {
+    IOLog("UBFramebuffer::setAttribute(%s, %lu)\n", getSelectorString(sel), value);
     switch (sel) {
 		case kIOPowerAttribute:
-			handleEvent((value >= kUBWakeState) ? kIOFBNotifyWillPowerOn : kIOFBNotifyWillPowerOff);
+			handleEvent(value >= kUBWakeState ? kIOFBNotifyWillPowerOn : kIOFBNotifyWillPowerOff);
             powerState = (int)value;
-			handleEvent((value >= kUBWakeState) ? kIOFBNotifyDidPowerOn : kIOFBNotifyDidPowerOff);
+			handleEvent(value >= kUBWakeState ? kIOFBNotifyDidPowerOn : kIOFBNotifyDidPowerOff);
 			return kIOReturnSuccess;
 		default: break;
 	}
@@ -220,10 +224,7 @@ IOItemCount UBFramebuffer::getConnectionCount() {
 }
 
 IOReturn UBFramebuffer::getAttributeForConnection(IOIndex index, IOSelect sel, uintptr_t * valueOut) {
-    char selName[5];
-    memcpy(selName, &sel, 4);
-    selName[4] = 0;
-    IOLog("UBFramebuffer::getAttributeForConnection(%d, %s)\n", (int)index, selName);
+    IOLog("UBFramebuffer::getAttributeForConnection(%d, %s)\n", (int)index, getSelectorString(sel));
     if (!valueOut) return kIOReturnBadArgument;
 	
 	switch (sel) {
@@ -244,6 +245,7 @@ IOReturn UBFramebuffer::getAttributeForConnection(IOIndex index, IOSelect sel, u
 }
 
 IOReturn UBFramebuffer::setAttributeForConnection(IOIndex index, IOSelect sel, uintptr_t value) {
+    IOLog("UBFramebuffer::setAttributeForConnection(%u, %s, %lu)\n", index, getSelectorString(sel), value);
     if (sel == kConnectionProbe) {
 		connectChangeInterrupt(this, 0);
 		return kIOReturnSuccess;
@@ -319,4 +321,11 @@ IOReturn UBFramebuffer::calculatePixelInformation(IODisplayModeInformation info,
 	pixelInfo->bytesPerRow = (pixelInfo->activeWidth * pixelInfo->bitsPerPixel / 8) + 32;
     
     return kIOReturnSuccess;
+}
+
+static const char * getSelectorString(IOSelect sel) {
+    static char buff[5];
+    memcpy(buff, &sel, 4);
+    buff[4] = 0;
+    return buff;
 }

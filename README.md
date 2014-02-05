@@ -10,6 +10,6 @@ I was very fortunate to have found [EWProxyFramebuffer](https://github.com/mkern
 
 # License
 
-Copyright (c) 2014 Alex Nichol
+Copyright (c) 2014 Alex Nichol.
 
 This software is under the [GNU GPL](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html).
