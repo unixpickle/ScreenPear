@@ -169,6 +169,7 @@ IOReturn UBFramebuffer::getPixelInformation(IODisplayModeID mode,
 
 IODeviceMemory * UBFramebuffer::getVRAMRange() {
     if (!buffer) return NULL;
+    // TODO: maybe there's a better way than a cast
     buffer->retain();
     return (IODeviceMemory *)buffer;
 }
@@ -321,7 +322,7 @@ IOReturn UBFramebuffer::calculatePixelInformation(IODisplayModeInformation info,
 	pixelInfo->bitsPerPixel = 32;
 	pixelInfo->componentCount = 3;
     pixelInfo->bitsPerComponent = 8;
-	pixelInfo->bytesPerRow = (pixelInfo->activeWidth * pixelInfo->bitsPerPixel / 8) + 32;
+	pixelInfo->bytesPerRow = (pixelInfo->activeWidth * 4) + 32;
     
     return kIOReturnSuccess;
 }
