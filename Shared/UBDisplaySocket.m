@@ -131,7 +131,14 @@
     return mappedBuffer;
 }
 
+- (void)requestUpdate {
+    uint64_t index = self.index;
+    IOConnectCallMethod(self.connect, kUBUserClientCommandRequestBuffer,
+                        &index, 1, NULL, 0, NULL, NULL, NULL, NULL);
+}
+
 - (NSImage *)createImage {
+    [self requestUpdate];
     void * buffer = [self framebuffer];
     NSData * data = [[NSData alloc] initWithBytes:buffer length:self.resolution.width * self.resolution.height * 3];
 	CGDataProviderRef dataprovider = CGDataProviderCreateWithCFData((__bridge CFDataRef)data);

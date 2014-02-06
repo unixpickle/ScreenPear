@@ -30,15 +30,6 @@ bool UBUserClient::initWithTask(task_t owningTask, void * security_id, UInt32 ty
     return true;
 }
 
-void UBUserClient::stop(IOService * provider) {
-    super::stop(provider);
-}
-
-bool UBUserClient::start(IOService * provider) {
-    if (!super::start(provider)) return false;
-    return true;
-}
-
 UBVideoDriver * UBUserClient::getVideoDriver() {
     return OSDynamicCast(UBVideoDriver, getProvider());
 }
@@ -115,4 +106,13 @@ IOReturn UBUserClient::gDisableCall(UBUserClient * target, void * reference, IOE
     uint32_t index = (uint32_t)arguments->scalarInput[0];
     if (index >= driver->getNubCount()) return kIOReturnBadArgument;
     return driver->getNub(index)->disable();
+}
+
+IOReturn gRequestBufferCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
+    UBVideoDriver * driver = target->getVideoDriver();
+    if (!driver) return kIOReturnNotAttached;
+    
+    uint32_t index = (uint32_t)arguments->scalarInput[0];
+    if (index >= driver->getNubCount()) return kIOReturnBadArgument;
+    return driver->getNub(index)->updateFramebuffer();
 }

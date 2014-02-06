@@ -5,7 +5,8 @@ typedef enum {
     kUBUserClientCommandGetCount,
     kUBUserClientCommandGetEnabled,
     kUBUserClientCommandSetMode,
-    kUBUserClientCommandDisable
+    kUBUserClientCommandDisable,
+    kUBUserClientCommandRequestBuffer
 } UBUserClientCommands;
 
 typedef struct {
@@ -13,5 +14,8 @@ typedef struct {
     UInt16 imageWidth, imageHeight;
     UInt32 reserved;
 } __attribute__((packed)) UBUserClientResolution;
+
+#define kDefaultScreenWidth 3840
+#define kDefaultScreenHeight 2160
 
 #endif

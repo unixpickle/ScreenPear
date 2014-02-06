@@ -23,6 +23,7 @@
 - (void)close;
 
 - (void *)framebuffer;
+- (void)requestUpdate;
 - (NSImage *)createImage;
 
 @end

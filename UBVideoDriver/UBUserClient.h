@@ -13,8 +13,6 @@ protected:
     
 public:
     virtual bool initWithTask(task_t owningTask, void * security_id, UInt32 type);
-    virtual void stop(IOService * provider);
-    virtual bool start(IOService * provider);
     virtual UBVideoDriver * getVideoDriver();
     
     virtual IOReturn message(UInt32 type, IOService * provider, void * argument = 0);
@@ -31,4 +29,5 @@ public:
     static IOReturn gGetEnabledCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
     static IOReturn gSetModeCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
     static IOReturn gDisableCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
+    static IOReturn gRequestBufferCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments);
 };

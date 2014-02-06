@@ -5,6 +5,7 @@
 #undef IOFRAMEBUFFER_PRIVATE
 
 #import <IOKit/IOBufferMemoryDescriptor.h>
+#import "UBUserClientShared.h"
 
 class UBFramebuffer : public IOFramebuffer {
     OSDeclareDefaultStructors(UBFramebuffer);
@@ -30,6 +31,7 @@ public:
     virtual IOReturn disable();
     virtual bool getIsEnabled();
     virtual IOBufferMemoryDescriptor * getBuffer();
+    virtual IODisplayModeInformation getCurrentMode();
     
     // initialization
     virtual bool init(OSDictionary * dict = 0);

@@ -62,6 +62,10 @@ IOBufferMemoryDescriptor * UBFramebuffer::getBuffer() {
     return buffer;
 }
 
+IODisplayModeInformation UBFramebuffer::getCurrentMode() {
+    return currentMode;
+}
+
 #pragma mark - Initialization -
 
 bool UBFramebuffer::init(OSDictionary * dict) {
@@ -81,7 +85,7 @@ bool UBFramebuffer::start(IOService * provider) {
     if (!location) return false;
     setLocation(location);
 	
-    currentMode = {3840, 2160, 60 << 16, 0, kDisplayModeValidFlag};
+    currentMode = {kDefaultScreenWidth, kDefaultScreenHeight, 60 << 16, 0, kDisplayModeValidFlag};
 	buffer = NULL;
     
     IOLog("UBFramebuffer::start - returning\n");
@@ -107,8 +111,7 @@ IOReturn UBFramebuffer::enableController() {
     if ((ret = calculateFramebufferSize(currentMode, &maximumSize))) return ret;
     
 	IOLog("%s: attempting to allocate %d bytes\n", getMetaClass()->getClassName(), maximumSize);
-	buffer = IOBufferMemoryDescriptor::withOptions(kIODirectionInOut | kIOMemoryKernelUserShared,
-                                                   maximumSize, page_size);
+	buffer = IOBufferMemoryDescriptor::withCapacity(maximumSize, kIODirectionInOut);
 	if (!buffer) {
 		IOLog("%s: error allocating memory: %d bytes\n", getMetaClass()->getClassName(), maximumSize);
         return KERN_FAILURE;
