@@ -20,6 +20,7 @@ static IOExternalMethodDispatch gMethods[] = {
     {(IOExternalMethodAction)&UBUserClient::gGetEnabledCall, 1, 0, 1, 0},
     {(IOExternalMethodAction)&UBUserClient::gSetModeCall, 1, sizeof(UBUserClientResolution), 0, 0},
     {(IOExternalMethodAction)&UBUserClient::gDisableCall, 1, 0, 0, 0},
+    {(IOExternalMethodAction)&UBUserClient::gRequestBufferCall, 1, 0, 0, 0}
 };
 
 static const int kMethodCount = sizeof(gMethods) / sizeof(IOExternalMethodDispatch);
@@ -108,7 +109,7 @@ IOReturn UBUserClient::gDisableCall(UBUserClient * target, void * reference, IOE
     return driver->getNub(index)->disable();
 }
 
-IOReturn gRequestBufferCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
+IOReturn UBUserClient::gRequestBufferCall(UBUserClient * target, void * reference, IOExternalMethodArguments * arguments) {
     UBVideoDriver * driver = target->getVideoDriver();
     if (!driver) return kIOReturnNotAttached;
     

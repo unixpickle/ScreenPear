@@ -103,7 +103,7 @@ IOReturn UBFramebuffer::enableController() {
     };
     registerPowerDriver(this, powerStates, 3);
     temporaryPowerClampOn();
-    changePowerStateTo(kUBSleepState);
+    changePowerStateTo(kUBWakeState);
 	getProvider()->setProperty(kIOPMIsPowerManagedKey, true);
     
     // configure framebuffer
@@ -180,9 +180,7 @@ IODeviceMemory * UBFramebuffer::getApertureRange(IOPixelAperture aperature) {
     UInt32 length;
     if (calculateFramebufferSize(currentMode, &length)) return NULL;
     
-	IODeviceMemory * apertureRange = IODeviceMemory::withRange(buffer->getPhysicalAddress(),
-                                                               (IOPhysicalLength)length);
-	return apertureRange;
+    return IODeviceMemory::withSubRange((IODeviceMemory *)buffer, 0, (IOPhysicalLength)length);
 }
 
 #pragma mark - General Attributes -
@@ -288,6 +286,33 @@ IOReturn UBFramebuffer::getCurrentDisplayMode(IODisplayModeID * modeOut, IOIndex
 	
 	*modeOut = 1;
 	*depthOut = 0;
+	
+	return kIOReturnSuccess;
+}
+
+#pragma mark - DDC -
+
+bool UBFramebuffer::hasDDCConnect(IOIndex connectIndex) {
+    return true;
+}
+
+IOReturn UBFramebuffer::getDDCBlock(IOIndex connectIndex, UInt32 blockNumber,
+                     IOSelect blockType, IOOptionBits options,
+                     UInt8 * data, IOByteCount * length) {
+    if (!data) return kIOReturnBadArgument;
+	
+	EDID edid;
+	
+	bzero(&edid, sizeof(edid));
+	
+	edid.descriptorBlock1.blockType = 0xfc; // monitor name
+	edid.descriptorBlock1.info[0] = 'n';
+	edid.descriptorBlock1.info[1] = 'e';
+	edid.descriptorBlock1.info[2] = 'd';
+	
+	// copy edid out
+	memcpy(data, &edid, sizeof(edid));
+	*length = sizeof(edid);
 	
 	return kIOReturnSuccess;
 }

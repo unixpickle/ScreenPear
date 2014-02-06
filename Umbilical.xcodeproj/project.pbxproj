@@ -17,6 +17,7 @@
 		FA2A7BFE18A029A900FDA6BF /* UBUserClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7BFC18A029A900FDA6BF /* UBUserClient.h */; };
 		FA2A7C0118A029F500FDA6BF /* UBUserClientShared.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7C0018A029F500FDA6BF /* UBUserClientShared.h */; };
 		FA2A7C0A18A03B8200FDA6BF /* IOFramebufferPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7C0918A03B8200FDA6BF /* IOFramebufferPrivate.h */; };
+		FA3CFABB18A33B0100B1EDE3 /* EDID.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3CFABA18A33B0100B1EDE3 /* EDID.h */; };
 		FA9AB91318A2B02100B0FCBD /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
 		FA9AB91418A2B56A00B0FCBD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
 		FAC7097918A1A1B2001F60A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC7097818A1A1B2001F60A6 /* Cocoa.framework */; };
@@ -50,6 +51,7 @@
 		FA2A7C0918A03B8200FDA6BF /* IOFramebufferPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOFramebufferPrivate.h; sourceTree = "<group>"; };
 		FA2A7C1018A03D6C00FDA6BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA2A7C1F18A0422000FDA6BF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		FA3CFABA18A33B0100B1EDE3 /* EDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDID.h; sourceTree = "<group>"; };
 		FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBDisplaySocket.h; sourceTree = "<group>"; };
 		FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBDisplaySocket.m; sourceTree = "<group>"; };
 		FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmbilicalControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 		FA2A7BD418A013C800FDA6BF /* UBFramebuffer */ = {
 			isa = PBXGroup;
 			children = (
+				FA3CFABA18A33B0100B1EDE3 /* EDID.h */,
 				FA2A7BDA18A013C800FDA6BF /* UBFramebuffer.h */,
 				FA2A7BDB18A013C800FDA6BF /* UBFramebuffer.cpp */,
 				FA2A7BD518A013C800FDA6BF /* Supporting Files */,
@@ -251,6 +254,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA3CFABB18A33B0100B1EDE3 /* EDID.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

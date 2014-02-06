@@ -133,8 +133,9 @@
 
 - (void)requestUpdate {
     uint64_t index = self.index;
-    IOConnectCallMethod(self.connect, kUBUserClientCommandRequestBuffer,
-                        &index, 1, NULL, 0, NULL, NULL, NULL, NULL);
+    IOReturn ret = IOConnectCallMethod(self.connect, kUBUserClientCommandRequestBuffer,
+                                       &index, 1, NULL, 0, NULL, NULL, NULL, NULL);
+    NSLog(@"got result %u", ret);
 }
 
 - (NSImage *)createImage {

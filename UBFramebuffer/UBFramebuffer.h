@@ -6,6 +6,7 @@
 
 #import <IOKit/IOBufferMemoryDescriptor.h>
 #import "UBUserClientShared.h"
+#import "EDID.h"
 
 class UBFramebuffer : public IOFramebuffer {
     OSDeclareDefaultStructors(UBFramebuffer);
@@ -65,5 +66,11 @@ public:
 	virtual IOItemCount getDisplayModeCount();
 	virtual IOReturn getDisplayModes(IODisplayModeID * modes);
 	virtual IOReturn setDisplayMode(IODisplayModeID mode, IOIndex depth);
-	virtual IOReturn getCurrentDisplayMode(IODisplayModeID * modeOut, IOIndex * depthOut);    
+	virtual IOReturn getCurrentDisplayMode(IODisplayModeID * modeOut, IOIndex * depthOut);
+    
+    // fake DDC, as per IOProxyVideoFamily
+    virtual bool hasDDCConnect(IOIndex connectIndex);
+    virtual IOReturn getDDCBlock(IOIndex connectIndex, UInt32 blockNumber,
+                                 IOSelect blockType, IOOptionBits options,
+                                 UInt8 * data, IOByteCount * length);
 };
