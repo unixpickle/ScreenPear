@@ -35,7 +35,7 @@
     UBDisplaySocket * socket = [UBDisplaySocket openUnusedDisplay:res];
     if (socket) {
         NSLog(@"got display %@", socket);
-        [self performSelector:@selector(getImage:) withObject:socket afterDelay:10];
+        [self performSelector:@selector(getImage:) withObject:socket afterDelay:60];
     } else {
         NSRunAlertPanel(@"Unable to Open", @"Failed to open a new display. All available displays may have been used.", @"OK", nil, nil);
     }

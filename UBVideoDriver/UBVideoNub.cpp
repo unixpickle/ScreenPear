@@ -59,9 +59,9 @@ IOReturn UBVideoNub::updateFramebuffer() {
         for (UInt32 x = 0; x < info.nominalWidth; x++) {
             // copy the RGB components
             UInt32 word = *(words++);
-            *(pixelDest++) = (word & 0xFF);
-            *(pixelDest++) = (word >> 8) & 0xFF;
             *(pixelDest++) = (word >> 16) & 0xFF;
+            *(pixelDest++) = (word >> 8) & 0xFF;
+            *(pixelDest++) = word & 0xFF;
         }
         
         // skip forward 32 bytes

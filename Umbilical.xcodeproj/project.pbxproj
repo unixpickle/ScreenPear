@@ -17,6 +17,17 @@
 		FA2A7BFE18A029A900FDA6BF /* UBUserClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7BFC18A029A900FDA6BF /* UBUserClient.h */; };
 		FA2A7C0118A029F500FDA6BF /* UBUserClientShared.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7C0018A029F500FDA6BF /* UBUserClientShared.h */; };
 		FA2A7C0A18A03B8200FDA6BF /* IOFramebufferPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7C0918A03B8200FDA6BF /* IOFramebufferPrivate.h */; };
+		FA2C34B418A578E200F7021C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC7097818A1A1B2001F60A6 /* Cocoa.framework */; };
+		FA2C34BA18A578E200F7021C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA2C34B818A578E200F7021C /* InfoPlist.strings */; };
+		FA2C34BC18A578E200F7021C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34BB18A578E200F7021C /* main.m */; };
+		FA2C34C018A578E200F7021C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA2C34BE18A578E200F7021C /* Credits.rtf */; };
+		FA2C34C318A578E200F7021C /* UBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34C218A578E200F7021C /* UBAppDelegate.m */; };
+		FA2C34C618A578E200F7021C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA2C34C418A578E200F7021C /* MainMenu.xib */; };
+		FA2C34C818A578E200F7021C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2C34C718A578E200F7021C /* Images.xcassets */; };
+		FA2C34E218A578F900F7021C /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
+		FA2C34E418A579EB00F7021C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2C34E318A579EB00F7021C /* IOKit.framework */; };
+		FA2C34EA18A57C6300F7021C /* UBTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34E718A57C6300F7021C /* UBTransport.m */; };
+		FA2C34EB18A57C6300F7021C /* UBTransportPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34E918A57C6300F7021C /* UBTransportPacket.m */; };
 		FA3CFABB18A33B0100B1EDE3 /* EDID.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3CFABA18A33B0100B1EDE3 /* EDID.h */; };
 		FA9AB91318A2B02100B0FCBD /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
 		FA9AB91418A2B56A00B0FCBD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
@@ -51,6 +62,21 @@
 		FA2A7C0918A03B8200FDA6BF /* IOFramebufferPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOFramebufferPrivate.h; sourceTree = "<group>"; };
 		FA2A7C1018A03D6C00FDA6BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		FA2A7C1F18A0422000FDA6BF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		FA2C34B318A578E200F7021C /* UmbilicalServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmbilicalServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA2C34B718A578E200F7021C /* UmbilicalServer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UmbilicalServer-Info.plist"; sourceTree = "<group>"; };
+		FA2C34B918A578E200F7021C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA2C34BB18A578E200F7021C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FA2C34BD18A578E200F7021C /* UmbilicalServer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UmbilicalServer-Prefix.pch"; sourceTree = "<group>"; };
+		FA2C34BF18A578E200F7021C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FA2C34C118A578E200F7021C /* UBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBAppDelegate.h; sourceTree = "<group>"; };
+		FA2C34C218A578E200F7021C /* UBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UBAppDelegate.m; sourceTree = "<group>"; };
+		FA2C34C518A578E200F7021C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		FA2C34C718A578E200F7021C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FA2C34E318A579EB00F7021C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		FA2C34E618A57C6300F7021C /* UBTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransport.h; sourceTree = "<group>"; };
+		FA2C34E718A57C6300F7021C /* UBTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransport.m; sourceTree = "<group>"; };
+		FA2C34E818A57C6300F7021C /* UBTransportPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportPacket.h; sourceTree = "<group>"; };
+		FA2C34E918A57C6300F7021C /* UBTransportPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportPacket.m; sourceTree = "<group>"; };
 		FA3CFABA18A33B0100B1EDE3 /* EDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDID.h; sourceTree = "<group>"; };
 		FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBDisplaySocket.h; sourceTree = "<group>"; };
 		FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBDisplaySocket.m; sourceTree = "<group>"; };
@@ -86,6 +112,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA2C34B018A578E200F7021C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2C34E418A579EB00F7021C /* IOKit.framework in Frameworks */,
+				FA2C34B418A578E200F7021C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAC7097418A1A1B2001F60A6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -106,6 +141,7 @@
 				FA2A7BD418A013C800FDA6BF /* UBFramebuffer */,
 				FA2A7BEA18A01C3600FDA6BF /* UBVideoDriver */,
 				FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */,
+				FA2C34B518A578E200F7021C /* UmbilicalServer */,
 				FA2A7BD118A013C800FDA6BF /* Frameworks */,
 				FA2A7BD018A013C800FDA6BF /* Products */,
 			);
@@ -117,6 +153,7 @@
 				FA2A7BCF18A013C800FDA6BF /* UBFramebuffer.kext */,
 				FA2A7BE918A01C3600FDA6BF /* UBVideoDriver.kext */,
 				FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */,
+				FA2C34B318A578E200F7021C /* UmbilicalServer.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +161,7 @@
 		FA2A7BD118A013C800FDA6BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA2C34E318A579EB00F7021C /* IOKit.framework */,
 				FA2A7C1F18A0422000FDA6BF /* IOKit.framework */,
 				FA2A7C1018A03D6C00FDA6BF /* Foundation.framework */,
 				FAC7097818A1A1B2001F60A6 /* Cocoa.framework */,
@@ -192,6 +230,7 @@
 		FA2A7BFF18A029EC00FDA6BF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				FA2C34E518A57C6300F7021C /* Transport Base */,
 				FA2A7C0018A029F500FDA6BF /* UBUserClientShared.h */,
 				FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */,
 				FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */,
@@ -221,6 +260,41 @@
 				FA2A7C0918A03B8200FDA6BF /* IOFramebufferPrivate.h */,
 			);
 			path = graphics;
+			sourceTree = "<group>";
+		};
+		FA2C34B518A578E200F7021C /* UmbilicalServer */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C34C118A578E200F7021C /* UBAppDelegate.h */,
+				FA2C34C218A578E200F7021C /* UBAppDelegate.m */,
+				FA2C34C418A578E200F7021C /* MainMenu.xib */,
+				FA2C34C718A578E200F7021C /* Images.xcassets */,
+				FA2C34B618A578E200F7021C /* Supporting Files */,
+			);
+			path = UmbilicalServer;
+			sourceTree = "<group>";
+		};
+		FA2C34B618A578E200F7021C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C34B718A578E200F7021C /* UmbilicalServer-Info.plist */,
+				FA2C34B818A578E200F7021C /* InfoPlist.strings */,
+				FA2C34BB18A578E200F7021C /* main.m */,
+				FA2C34BD18A578E200F7021C /* UmbilicalServer-Prefix.pch */,
+				FA2C34BE18A578E200F7021C /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FA2C34E518A57C6300F7021C /* Transport Base */ = {
+			isa = PBXGroup;
+			children = (
+				FA2C34E618A57C6300F7021C /* UBTransport.h */,
+				FA2C34E718A57C6300F7021C /* UBTransport.m */,
+				FA2C34E818A57C6300F7021C /* UBTransportPacket.h */,
+				FA2C34E918A57C6300F7021C /* UBTransportPacket.m */,
+			);
+			path = "Transport Base";
 			sourceTree = "<group>";
 		};
 		FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */ = {
@@ -310,6 +384,23 @@
 			productReference = FA2A7BE918A01C3600FDA6BF /* UBVideoDriver.kext */;
 			productType = "com.apple.product-type.kernel-extension";
 		};
+		FA2C34B218A578E200F7021C /* UmbilicalServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA2C34DA18A578E200F7021C /* Build configuration list for PBXNativeTarget "UmbilicalServer" */;
+			buildPhases = (
+				FA2C34AF18A578E200F7021C /* Sources */,
+				FA2C34B018A578E200F7021C /* Frameworks */,
+				FA2C34B118A578E200F7021C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UmbilicalServer;
+			productName = UmbilicalServer;
+			productReference = FA2C34B318A578E200F7021C /* UmbilicalServer.app */;
+			productType = "com.apple.product-type.application";
+		};
 		FAC7097618A1A1B2001F60A6 /* UmbilicalControl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAC709A718A1A1B2001F60A6 /* Build configuration list for PBXNativeTarget "UmbilicalControl" */;
@@ -351,6 +442,7 @@
 				FA2A7BCE18A013C800FDA6BF /* UBFramebuffer */,
 				FA2A7BE818A01C3600FDA6BF /* UBVideoDriver */,
 				FAC7097618A1A1B2001F60A6 /* UmbilicalControl */,
+				FA2C34B218A578E200F7021C /* UmbilicalServer */,
 			);
 		};
 /* End PBXProject section */
@@ -369,6 +461,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2A7BEF18A01C3600FDA6BF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA2C34B118A578E200F7021C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2C34BA18A578E200F7021C /* InfoPlist.strings in Resources */,
+				FA2C34C818A578E200F7021C /* Images.xcassets in Resources */,
+				FA2C34C018A578E200F7021C /* Credits.rtf in Resources */,
+				FA2C34C618A578E200F7021C /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,6 +524,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA2C34AF18A578E200F7021C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA2C34EA18A57C6300F7021C /* UBTransport.m in Sources */,
+				FA2C34E218A578F900F7021C /* UBDisplaySocket.m in Sources */,
+				FA2C34BC18A578E200F7021C /* main.m in Sources */,
+				FA2C34C318A578E200F7021C /* UBAppDelegate.m in Sources */,
+				FA2C34EB18A57C6300F7021C /* UBTransportPacket.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAC7097318A1A1B2001F60A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -448,6 +563,30 @@
 				FA2A7BEE18A01C3600FDA6BF /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA2C34B818A578E200F7021C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA2C34B918A578E200F7021C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FA2C34BE18A578E200F7021C /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA2C34BF18A578E200F7021C /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		FA2C34C418A578E200F7021C /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA2C34C518A578E200F7021C /* Base */,
+			);
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 		FAC7098018A1A1B2001F60A6 /* InfoPlist.strings */ = {
@@ -675,6 +814,88 @@
 			};
 			name = Release;
 		};
+		FA2C34DB18A578E200F7021C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UmbilicalServer/UmbilicalServer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "UmbilicalServer/UmbilicalServer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FA2C34DC18A578E200F7021C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "UmbilicalServer/UmbilicalServer-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "UmbilicalServer/UmbilicalServer-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.8;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		FAC709A318A1A1B2001F60A6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -786,6 +1007,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		FA2C34DA18A578E200F7021C /* Build configuration list for PBXNativeTarget "UmbilicalServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA2C34DB18A578E200F7021C /* Debug */,
+				FA2C34DC18A578E200F7021C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		FAC709A718A1A1B2001F60A6 /* Build configuration list for PBXNativeTarget "UmbilicalControl" */ = {
 			isa = XCConfigurationList;
