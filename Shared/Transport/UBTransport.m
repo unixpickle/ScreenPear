@@ -33,6 +33,10 @@
     [self _writeData:packet.data];
 }
 
+- (void)shutdown {
+    _open = NO;
+}
+
 #pragma mark - Internal -
 
 - (void)_gotData:(NSData *)data {

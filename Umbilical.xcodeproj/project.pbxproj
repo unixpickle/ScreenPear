@@ -26,8 +26,9 @@
 		FA2C34C818A578E200F7021C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2C34C718A578E200F7021C /* Images.xcassets */; };
 		FA2C34E218A578F900F7021C /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
 		FA2C34E418A579EB00F7021C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2C34E318A579EB00F7021C /* IOKit.framework */; };
-		FA2C34EA18A57C6300F7021C /* UBTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34E718A57C6300F7021C /* UBTransport.m */; };
-		FA2C34EB18A57C6300F7021C /* UBTransportPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34E918A57C6300F7021C /* UBTransportPacket.m */; };
+		FA2C34F718A5879000F7021C /* UBTCPTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F118A5879000F7021C /* UBTCPTransport.m */; };
+		FA2C34F818A5879000F7021C /* UBTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F318A5879000F7021C /* UBTransport.m */; };
+		FA2C34F918A5879000F7021C /* UBTransportPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F518A5879000F7021C /* UBTransportPacket.m */; };
 		FA3CFABB18A33B0100B1EDE3 /* EDID.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3CFABA18A33B0100B1EDE3 /* EDID.h */; };
 		FA9AB91318A2B02100B0FCBD /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
 		FA9AB91418A2B56A00B0FCBD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
@@ -73,10 +74,12 @@
 		FA2C34C518A578E200F7021C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		FA2C34C718A578E200F7021C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FA2C34E318A579EB00F7021C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
-		FA2C34E618A57C6300F7021C /* UBTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransport.h; sourceTree = "<group>"; };
-		FA2C34E718A57C6300F7021C /* UBTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransport.m; sourceTree = "<group>"; };
-		FA2C34E818A57C6300F7021C /* UBTransportPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportPacket.h; sourceTree = "<group>"; };
-		FA2C34E918A57C6300F7021C /* UBTransportPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportPacket.m; sourceTree = "<group>"; };
+		FA2C34F018A5879000F7021C /* UBTCPTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTCPTransport.h; sourceTree = "<group>"; };
+		FA2C34F118A5879000F7021C /* UBTCPTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTCPTransport.m; sourceTree = "<group>"; };
+		FA2C34F218A5879000F7021C /* UBTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransport.h; sourceTree = "<group>"; };
+		FA2C34F318A5879000F7021C /* UBTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransport.m; sourceTree = "<group>"; };
+		FA2C34F418A5879000F7021C /* UBTransportPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportPacket.h; sourceTree = "<group>"; };
+		FA2C34F518A5879000F7021C /* UBTransportPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportPacket.m; sourceTree = "<group>"; };
 		FA3CFABA18A33B0100B1EDE3 /* EDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDID.h; sourceTree = "<group>"; };
 		FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBDisplaySocket.h; sourceTree = "<group>"; };
 		FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBDisplaySocket.m; sourceTree = "<group>"; };
@@ -230,7 +233,8 @@
 		FA2A7BFF18A029EC00FDA6BF /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				FA2C34E518A57C6300F7021C /* Transport Base */,
+				FA2C34EF18A5879000F7021C /* Transport */,
+				FA2C34F618A5879000F7021C /* Transport Discovery */,
 				FA2A7C0018A029F500FDA6BF /* UBUserClientShared.h */,
 				FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */,
 				FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */,
@@ -286,15 +290,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		FA2C34E518A57C6300F7021C /* Transport Base */ = {
+		FA2C34EF18A5879000F7021C /* Transport */ = {
 			isa = PBXGroup;
 			children = (
-				FA2C34E618A57C6300F7021C /* UBTransport.h */,
-				FA2C34E718A57C6300F7021C /* UBTransport.m */,
-				FA2C34E818A57C6300F7021C /* UBTransportPacket.h */,
-				FA2C34E918A57C6300F7021C /* UBTransportPacket.m */,
+				FA2C34F018A5879000F7021C /* UBTCPTransport.h */,
+				FA2C34F118A5879000F7021C /* UBTCPTransport.m */,
+				FA2C34F218A5879000F7021C /* UBTransport.h */,
+				FA2C34F318A5879000F7021C /* UBTransport.m */,
+				FA2C34F418A5879000F7021C /* UBTransportPacket.h */,
+				FA2C34F518A5879000F7021C /* UBTransportPacket.m */,
 			);
-			path = "Transport Base";
+			path = Transport;
+			sourceTree = "<group>";
+		};
+		FA2C34F618A5879000F7021C /* Transport Discovery */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Transport Discovery";
 			sourceTree = "<group>";
 		};
 		FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */ = {
@@ -528,11 +541,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2C34EA18A57C6300F7021C /* UBTransport.m in Sources */,
 				FA2C34E218A578F900F7021C /* UBDisplaySocket.m in Sources */,
 				FA2C34BC18A578E200F7021C /* main.m in Sources */,
+				FA2C34F918A5879000F7021C /* UBTransportPacket.m in Sources */,
+				FA2C34F718A5879000F7021C /* UBTCPTransport.m in Sources */,
+				FA2C34F818A5879000F7021C /* UBTransport.m in Sources */,
 				FA2C34C318A578E200F7021C /* UBAppDelegate.m in Sources */,
-				FA2C34EB18A57C6300F7021C /* UBTransportPacket.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

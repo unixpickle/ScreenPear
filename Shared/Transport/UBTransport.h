@@ -27,6 +27,7 @@
 
 // basic interface
 - (void)sendPacket:(UBTransportPacket *)packet;
+- (void)shutdown;
 
 // methods to be called by sub-classes
 - (void)_gotData:(NSData *)data;
