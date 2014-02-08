@@ -19,7 +19,7 @@
 - (id)initWithPort:(UInt16)aPort {
     if ((self = [super init])) {
         port = aPort;
-        sockaddr_in addr;
+        struct sockaddr_in addr;
         fd = socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP);
         int port=6000;
         int broadcast=1;

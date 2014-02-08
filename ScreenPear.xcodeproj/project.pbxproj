@@ -7,14 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA2A7BD918A013C800FDA6BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA2A7BD718A013C800FDA6BF /* InfoPlist.strings */; };
-		FA2A7BDC18A013C800FDA6BF /* UBFramebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA2A7BDB18A013C800FDA6BF /* UBFramebuffer.cpp */; };
-		FA2A7BEF18A01C3600FDA6BF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA2A7BED18A01C3600FDA6BF /* InfoPlist.strings */; };
-		FA2A7BF218A01C3600FDA6BF /* UBVideoDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA2A7BF118A01C3600FDA6BF /* UBVideoDriver.cpp */; };
-		FA2A7BF918A0221800FDA6BF /* UBVideoNub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA2A7BF718A0221800FDA6BF /* UBVideoNub.cpp */; };
-		FA2A7BFA18A0221800FDA6BF /* UBVideoNub.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7BF818A0221800FDA6BF /* UBVideoNub.h */; };
-		FA2A7BFD18A029A900FDA6BF /* UBUserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FA2A7BFB18A029A900FDA6BF /* UBUserClient.cpp */; };
-		FA2A7BFE18A029A900FDA6BF /* UBUserClient.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7BFC18A029A900FDA6BF /* UBUserClient.h */; };
 		FA2A7C0118A029F500FDA6BF /* UBUserClientShared.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7C0018A029F500FDA6BF /* UBUserClientShared.h */; };
 		FA2A7C0A18A03B8200FDA6BF /* IOFramebufferPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = FA2A7C0918A03B8200FDA6BF /* IOFramebufferPrivate.h */; };
 		FA2C34B418A578E200F7021C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC7097818A1A1B2001F60A6 /* Cocoa.framework */; };
@@ -29,7 +21,6 @@
 		FA2C34F718A5879000F7021C /* UBTCPTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F118A5879000F7021C /* UBTCPTransport.m */; };
 		FA2C34F818A5879000F7021C /* UBTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F318A5879000F7021C /* UBTransport.m */; };
 		FA2C34F918A5879000F7021C /* UBTransportPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F518A5879000F7021C /* UBTransportPacket.m */; };
-		FA3CFABB18A33B0100B1EDE3 /* EDID.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3CFABA18A33B0100B1EDE3 /* EDID.h */; };
 		FA45A9D418A5881700773C69 /* UBTransportScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45A9D318A5881700773C69 /* UBTransportScanner.m */; };
 		FA45A9D718A5883E00773C69 /* UBTransportServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45A9D618A5883E00773C69 /* UBTransportServer.m */; };
 		FA45A9DD18A5AD9200773C69 /* UBTransportUDPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45A9DC18A5AD9200773C69 /* UBTransportUDPServer.m */; };
@@ -38,6 +29,10 @@
 		FA45AA0A18A5CBF600773C69 /* UBTransportUDPScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45AA0718A5CBF600773C69 /* UBTransportUDPScanner.m */; };
 		FA9AB91318A2B02100B0FCBD /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
 		FA9AB91418A2B56A00B0FCBD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
+		FABB2D6818A5EA9F00F2B96A /* UBFramebuffer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FABB2D5B18A5EA9700F2B96A /* UBFramebuffer.cpp */; };
+		FABB2D6918A5EAA900F2B96A /* UBUserClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FABB2D6018A5EA9700F2B96A /* UBUserClient.cpp */; };
+		FABB2D6A18A5EAAA00F2B96A /* UBVideoDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FABB2D6418A5EA9700F2B96A /* UBVideoDriver.cpp */; };
+		FABB2D6B18A5EAAC00F2B96A /* UBVideoNub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FABB2D6618A5EA9700F2B96A /* UBVideoNub.cpp */; };
 		FAC7097918A1A1B2001F60A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC7097818A1A1B2001F60A6 /* Cocoa.framework */; };
 		FAC7098218A1A1B2001F60A6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAC7098018A1A1B2001F60A6 /* InfoPlist.strings */; };
 		FAC7098418A1A1B2001F60A6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAC7098318A1A1B2001F60A6 /* main.m */; };
@@ -50,21 +45,7 @@
 /* Begin PBXFileReference section */
 		FA2A7BCF18A013C800FDA6BF /* UBFramebuffer.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBFramebuffer.kext; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2A7BD318A013C800FDA6BF /* Kernel.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kernel.framework; path = System/Library/Frameworks/Kernel.framework; sourceTree = SDKROOT; };
-		FA2A7BD618A013C800FDA6BF /* UBFramebuffer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UBFramebuffer-Info.plist"; sourceTree = "<group>"; };
-		FA2A7BD818A013C800FDA6BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FA2A7BDA18A013C800FDA6BF /* UBFramebuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBFramebuffer.h; sourceTree = "<group>"; };
-		FA2A7BDB18A013C800FDA6BF /* UBFramebuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UBFramebuffer.cpp; sourceTree = "<group>"; };
-		FA2A7BDD18A013C800FDA6BF /* UBFramebuffer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBFramebuffer-Prefix.pch"; sourceTree = "<group>"; };
 		FA2A7BE918A01C3600FDA6BF /* UBVideoDriver.kext */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UBVideoDriver.kext; sourceTree = BUILT_PRODUCTS_DIR; };
-		FA2A7BEC18A01C3600FDA6BF /* UBVideoDriver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UBVideoDriver-Info.plist"; sourceTree = "<group>"; };
-		FA2A7BEE18A01C3600FDA6BF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		FA2A7BF018A01C3600FDA6BF /* UBVideoDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBVideoDriver.h; sourceTree = "<group>"; };
-		FA2A7BF118A01C3600FDA6BF /* UBVideoDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UBVideoDriver.cpp; sourceTree = "<group>"; };
-		FA2A7BF318A01C3600FDA6BF /* UBVideoDriver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBVideoDriver-Prefix.pch"; sourceTree = "<group>"; };
-		FA2A7BF718A0221800FDA6BF /* UBVideoNub.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UBVideoNub.cpp; sourceTree = "<group>"; };
-		FA2A7BF818A0221800FDA6BF /* UBVideoNub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBVideoNub.h; sourceTree = "<group>"; };
-		FA2A7BFB18A029A900FDA6BF /* UBUserClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = UBUserClient.cpp; sourceTree = "<group>"; };
-		FA2A7BFC18A029A900FDA6BF /* UBUserClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBUserClient.h; sourceTree = "<group>"; };
 		FA2A7C0018A029F500FDA6BF /* UBUserClientShared.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBUserClientShared.h; sourceTree = "<group>"; };
 		FA2A7C0918A03B8200FDA6BF /* IOFramebufferPrivate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOFramebufferPrivate.h; sourceTree = "<group>"; };
 		FA2A7C1018A03D6C00FDA6BF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -86,7 +67,6 @@
 		FA2C34F318A5879000F7021C /* UBTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransport.m; sourceTree = "<group>"; };
 		FA2C34F418A5879000F7021C /* UBTransportPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportPacket.h; sourceTree = "<group>"; };
 		FA2C34F518A5879000F7021C /* UBTransportPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportPacket.m; sourceTree = "<group>"; };
-		FA3CFABA18A33B0100B1EDE3 /* EDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDID.h; sourceTree = "<group>"; };
 		FA45A9D218A5881700773C69 /* UBTransportScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportScanner.h; sourceTree = "<group>"; };
 		FA45A9D318A5881700773C69 /* UBTransportScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportScanner.m; sourceTree = "<group>"; };
 		FA45A9D518A5883E00773C69 /* UBTransportServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportServer.h; sourceTree = "<group>"; };
@@ -101,6 +81,21 @@
 		FA45AA0718A5CBF600773C69 /* UBTransportUDPScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportUDPScanner.m; sourceTree = "<group>"; };
 		FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBDisplaySocket.h; sourceTree = "<group>"; };
 		FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBDisplaySocket.m; sourceTree = "<group>"; };
+		FABB2D5618A5EA9700F2B96A /* EDID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EDID.h; sourceTree = "<group>"; };
+		FABB2D5818A5EA9700F2B96A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FABB2D5918A5EA9700F2B96A /* UBFramebuffer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UBFramebuffer-Info.plist"; sourceTree = "<group>"; };
+		FABB2D5A18A5EA9700F2B96A /* UBFramebuffer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBFramebuffer-Prefix.pch"; sourceTree = "<group>"; };
+		FABB2D5B18A5EA9700F2B96A /* UBFramebuffer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UBFramebuffer.cpp; sourceTree = "<group>"; };
+		FABB2D5C18A5EA9700F2B96A /* UBFramebuffer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBFramebuffer.h; sourceTree = "<group>"; };
+		FABB2D5F18A5EA9700F2B96A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FABB2D6018A5EA9700F2B96A /* UBUserClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UBUserClient.cpp; sourceTree = "<group>"; };
+		FABB2D6118A5EA9700F2B96A /* UBUserClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBUserClient.h; sourceTree = "<group>"; };
+		FABB2D6218A5EA9700F2B96A /* UBVideoDriver-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UBVideoDriver-Info.plist"; sourceTree = "<group>"; };
+		FABB2D6318A5EA9700F2B96A /* UBVideoDriver-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UBVideoDriver-Prefix.pch"; sourceTree = "<group>"; };
+		FABB2D6418A5EA9700F2B96A /* UBVideoDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UBVideoDriver.cpp; sourceTree = "<group>"; };
+		FABB2D6518A5EA9700F2B96A /* UBVideoDriver.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBVideoDriver.h; sourceTree = "<group>"; };
+		FABB2D6618A5EA9700F2B96A /* UBVideoNub.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = UBVideoNub.cpp; sourceTree = "<group>"; };
+		FABB2D6718A5EA9700F2B96A /* UBVideoNub.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UBVideoNub.h; sourceTree = "<group>"; };
 		FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmbilicalControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC7097818A1A1B2001F60A6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FAC7097A18A1A1B2001F60A6 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -157,10 +152,10 @@
 		FA2A7BC218A0138200FDA6BF = {
 			isa = PBXGroup;
 			children = (
+				FABB2D5518A5EA9700F2B96A /* SPFramebuffer */,
+				FABB2D5D18A5EA9700F2B96A /* SPVideoDriver */,
 				FA2A7C0618A03B8100FDA6BF /* Headers */,
 				FA2A7BFF18A029EC00FDA6BF /* Shared */,
-				FA2A7BD418A013C800FDA6BF /* UBFramebuffer */,
-				FA2A7BEA18A01C3600FDA6BF /* UBVideoDriver */,
 				FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */,
 				FA2C34B518A578E200F7021C /* UmbilicalServer */,
 				FA2A7BD118A013C800FDA6BF /* Frameworks */,
@@ -201,51 +196,6 @@
 				FAC7097C18A1A1B2001F60A6 /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		FA2A7BD418A013C800FDA6BF /* UBFramebuffer */ = {
-			isa = PBXGroup;
-			children = (
-				FA3CFABA18A33B0100B1EDE3 /* EDID.h */,
-				FA2A7BDA18A013C800FDA6BF /* UBFramebuffer.h */,
-				FA2A7BDB18A013C800FDA6BF /* UBFramebuffer.cpp */,
-				FA2A7BD518A013C800FDA6BF /* Supporting Files */,
-			);
-			path = UBFramebuffer;
-			sourceTree = "<group>";
-		};
-		FA2A7BD518A013C800FDA6BF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FA2A7BD618A013C800FDA6BF /* UBFramebuffer-Info.plist */,
-				FA2A7BD718A013C800FDA6BF /* InfoPlist.strings */,
-				FA2A7BDD18A013C800FDA6BF /* UBFramebuffer-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		FA2A7BEA18A01C3600FDA6BF /* UBVideoDriver */ = {
-			isa = PBXGroup;
-			children = (
-				FA2A7BF018A01C3600FDA6BF /* UBVideoDriver.h */,
-				FA2A7BF118A01C3600FDA6BF /* UBVideoDriver.cpp */,
-				FA2A7BF818A0221800FDA6BF /* UBVideoNub.h */,
-				FA2A7BF718A0221800FDA6BF /* UBVideoNub.cpp */,
-				FA2A7BFC18A029A900FDA6BF /* UBUserClient.h */,
-				FA2A7BFB18A029A900FDA6BF /* UBUserClient.cpp */,
-				FA2A7BEB18A01C3600FDA6BF /* Supporting Files */,
-			);
-			path = UBVideoDriver;
-			sourceTree = "<group>";
-		};
-		FA2A7BEB18A01C3600FDA6BF /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				FA2A7BEC18A01C3600FDA6BF /* UBVideoDriver-Info.plist */,
-				FA2A7BED18A01C3600FDA6BF /* InfoPlist.strings */,
-				FA2A7BF318A01C3600FDA6BF /* UBVideoDriver-Prefix.pch */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		FA2A7BFF18A029EC00FDA6BF /* Shared */ = {
@@ -348,6 +298,35 @@
 			path = "UDP Scanner";
 			sourceTree = "<group>";
 		};
+		FABB2D5518A5EA9700F2B96A /* SPFramebuffer */ = {
+			isa = PBXGroup;
+			children = (
+				FABB2D5618A5EA9700F2B96A /* EDID.h */,
+				FABB2D5718A5EA9700F2B96A /* InfoPlist.strings */,
+				FABB2D5918A5EA9700F2B96A /* UBFramebuffer-Info.plist */,
+				FABB2D5A18A5EA9700F2B96A /* UBFramebuffer-Prefix.pch */,
+				FABB2D5B18A5EA9700F2B96A /* UBFramebuffer.cpp */,
+				FABB2D5C18A5EA9700F2B96A /* UBFramebuffer.h */,
+			);
+			path = SPFramebuffer;
+			sourceTree = "<group>";
+		};
+		FABB2D5D18A5EA9700F2B96A /* SPVideoDriver */ = {
+			isa = PBXGroup;
+			children = (
+				FABB2D5E18A5EA9700F2B96A /* InfoPlist.strings */,
+				FABB2D6018A5EA9700F2B96A /* UBUserClient.cpp */,
+				FABB2D6118A5EA9700F2B96A /* UBUserClient.h */,
+				FABB2D6218A5EA9700F2B96A /* UBVideoDriver-Info.plist */,
+				FABB2D6318A5EA9700F2B96A /* UBVideoDriver-Prefix.pch */,
+				FABB2D6418A5EA9700F2B96A /* UBVideoDriver.cpp */,
+				FABB2D6518A5EA9700F2B96A /* UBVideoDriver.h */,
+				FABB2D6618A5EA9700F2B96A /* UBVideoNub.cpp */,
+				FABB2D6718A5EA9700F2B96A /* UBVideoNub.h */,
+			);
+			path = SPVideoDriver;
+			sourceTree = "<group>";
+		};
 		FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,7 +358,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3CFABB18A33B0100B1EDE3 /* EDID.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,17 +367,15 @@
 			files = (
 				FA2A7C0A18A03B8200FDA6BF /* IOFramebufferPrivate.h in Headers */,
 				FA2A7C0118A029F500FDA6BF /* UBUserClientShared.h in Headers */,
-				FA2A7BFA18A0221800FDA6BF /* UBVideoNub.h in Headers */,
-				FA2A7BFE18A029A900FDA6BF /* UBUserClient.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		FA2A7BCE18A013C800FDA6BF /* UBFramebuffer */ = {
+		FA2A7BCE18A013C800FDA6BF /* SPFramebuffer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA2A7BDE18A013C800FDA6BF /* Build configuration list for PBXNativeTarget "UBFramebuffer" */;
+			buildConfigurationList = FA2A7BDE18A013C800FDA6BF /* Build configuration list for PBXNativeTarget "SPFramebuffer" */;
 			buildPhases = (
 				FA2A7BC918A013C800FDA6BF /* Sources */,
 				FA2A7BCA18A013C800FDA6BF /* Frameworks */,
@@ -411,14 +387,14 @@
 			);
 			dependencies = (
 			);
-			name = UBFramebuffer;
+			name = SPFramebuffer;
 			productName = UBFramebuffer;
 			productReference = FA2A7BCF18A013C800FDA6BF /* UBFramebuffer.kext */;
 			productType = "com.apple.product-type.kernel-extension";
 		};
-		FA2A7BE818A01C3600FDA6BF /* UBVideoDriver */ = {
+		FA2A7BE818A01C3600FDA6BF /* SPVideoDriver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA2A7BF418A01C3600FDA6BF /* Build configuration list for PBXNativeTarget "UBVideoDriver" */;
+			buildConfigurationList = FA2A7BF418A01C3600FDA6BF /* Build configuration list for PBXNativeTarget "SPVideoDriver" */;
 			buildPhases = (
 				FA2A7BE318A01C3600FDA6BF /* Sources */,
 				FA2A7BE418A01C3600FDA6BF /* Frameworks */,
@@ -430,7 +406,7 @@
 			);
 			dependencies = (
 			);
-			name = UBVideoDriver;
+			name = SPVideoDriver;
 			productName = UBVideoDriver;
 			productReference = FA2A7BE918A01C3600FDA6BF /* UBVideoDriver.kext */;
 			productType = "com.apple.product-type.kernel-extension";
@@ -477,7 +453,7 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 			};
-			buildConfigurationList = FA2A7BC618A0138200FDA6BF /* Build configuration list for PBXProject "Umbilical" */;
+			buildConfigurationList = FA2A7BC618A0138200FDA6BF /* Build configuration list for PBXProject "ScreenPear" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -490,8 +466,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA2A7BCE18A013C800FDA6BF /* UBFramebuffer */,
-				FA2A7BE818A01C3600FDA6BF /* UBVideoDriver */,
+				FA2A7BCE18A013C800FDA6BF /* SPFramebuffer */,
+				FA2A7BE818A01C3600FDA6BF /* SPVideoDriver */,
 				FAC7097618A1A1B2001F60A6 /* UmbilicalControl */,
 				FA2C34B218A578E200F7021C /* UmbilicalServer */,
 			);
@@ -503,7 +479,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2A7BD918A013C800FDA6BF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +486,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2A7BEF18A01C3600FDA6BF /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2A7BDC18A013C800FDA6BF /* UBFramebuffer.cpp in Sources */,
+				FABB2D6818A5EA9F00F2B96A /* UBFramebuffer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,9 +543,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2A7BF918A0221800FDA6BF /* UBVideoNub.cpp in Sources */,
-				FA2A7BFD18A029A900FDA6BF /* UBUserClient.cpp in Sources */,
-				FA2A7BF218A01C3600FDA6BF /* UBVideoDriver.cpp in Sources */,
+				FABB2D6918A5EAA900F2B96A /* UBUserClient.cpp in Sources */,
+				FABB2D6A18A5EAAA00F2B96A /* UBVideoDriver.cpp in Sources */,
+				FABB2D6B18A5EAAC00F2B96A /* UBVideoNub.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,22 +581,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA2A7BD718A013C800FDA6BF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA2A7BD818A013C800FDA6BF /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		FA2A7BED18A01C3600FDA6BF /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA2A7BEE18A01C3600FDA6BF /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		FA2C34B818A578E200F7021C /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -645,6 +603,22 @@
 				FA2C34C518A578E200F7021C /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		FABB2D5718A5EA9700F2B96A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FABB2D5818A5EA9700F2B96A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FABB2D5E18A5EA9700F2B96A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FABB2D5F18A5EA9700F2B96A /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 		FAC7098018A1A1B2001F60A6 /* InfoPlist.strings */ = {
@@ -1039,7 +1013,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA2A7BC618A0138200FDA6BF /* Build configuration list for PBXProject "Umbilical" */ = {
+		FA2A7BC618A0138200FDA6BF /* Build configuration list for PBXProject "ScreenPear" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA2A7BC718A0138200FDA6BF /* Debug */,
@@ -1048,7 +1022,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA2A7BDE18A013C800FDA6BF /* Build configuration list for PBXNativeTarget "UBFramebuffer" */ = {
+		FA2A7BDE18A013C800FDA6BF /* Build configuration list for PBXNativeTarget "SPFramebuffer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA2A7BDF18A013C800FDA6BF /* Debug */,
@@ -1057,7 +1031,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA2A7BF418A01C3600FDA6BF /* Build configuration list for PBXNativeTarget "UBVideoDriver" */ = {
+		FA2A7BF418A01C3600FDA6BF /* Build configuration list for PBXNativeTarget "SPVideoDriver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA2A7BF518A01C3600FDA6BF /* Debug */,
