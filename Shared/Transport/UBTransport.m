@@ -47,7 +47,9 @@
     
     UBTransportPacket * packet;
     while ((packet = [self _dequeuePacket])) {
-        [self.delegate transport:self gotPacket:packet];
+        if ([self.delegate respondsToSelector:@selector(transport:gotPacket:)]) {
+            [self.delegate transport:self gotPacket:packet];
+        }
     }
 }
 
@@ -55,7 +57,9 @@
     if (!self.open) return;
     
     _open = NO;
-    [self.delegate transportClosed:self];
+    if ([self.delegate respondsToSelector:@selector(transportClosed:)]) {
+        [self.delegate transportClosed:self];
+    }
 }
 
 - (void)_writeData:(NSData *)data {

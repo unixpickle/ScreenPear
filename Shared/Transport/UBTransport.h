@@ -10,6 +10,7 @@
 
 @protocol UBTransportDelegate <NSObject>
 
+@optional
 - (void)transport:(id)tp gotPacket:(UBTransportPacket *)packet;
 - (void)transportClosed:(id)tp;
 

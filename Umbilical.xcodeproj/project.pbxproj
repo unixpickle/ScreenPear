@@ -30,6 +30,12 @@
 		FA2C34F818A5879000F7021C /* UBTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F318A5879000F7021C /* UBTransport.m */; };
 		FA2C34F918A5879000F7021C /* UBTransportPacket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA2C34F518A5879000F7021C /* UBTransportPacket.m */; };
 		FA3CFABB18A33B0100B1EDE3 /* EDID.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3CFABA18A33B0100B1EDE3 /* EDID.h */; };
+		FA45A9D418A5881700773C69 /* UBTransportScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45A9D318A5881700773C69 /* UBTransportScanner.m */; };
+		FA45A9D718A5883E00773C69 /* UBTransportServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45A9D618A5883E00773C69 /* UBTransportServer.m */; };
+		FA45A9DD18A5AD9200773C69 /* UBTransportUDPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45A9DC18A5AD9200773C69 /* UBTransportUDPServer.m */; };
+		FA45AA0818A5CBF600773C69 /* UBTransportUDPConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45AA0318A5CBF600773C69 /* UBTransportUDPConnector.m */; };
+		FA45AA0918A5CBF600773C69 /* UBTransportUDPIdentity.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45AA0518A5CBF600773C69 /* UBTransportUDPIdentity.m */; };
+		FA45AA0A18A5CBF600773C69 /* UBTransportUDPScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = FA45AA0718A5CBF600773C69 /* UBTransportUDPScanner.m */; };
 		FA9AB91318A2B02100B0FCBD /* UBDisplaySocket.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */; };
 		FA9AB91418A2B56A00B0FCBD /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA2A7C1F18A0422000FDA6BF /* IOKit.framework */; };
 		FAC7097918A1A1B2001F60A6 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC7097818A1A1B2001F60A6 /* Cocoa.framework */; };
@@ -81,6 +87,18 @@
 		FA2C34F418A5879000F7021C /* UBTransportPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportPacket.h; sourceTree = "<group>"; };
 		FA2C34F518A5879000F7021C /* UBTransportPacket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportPacket.m; sourceTree = "<group>"; };
 		FA3CFABA18A33B0100B1EDE3 /* EDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDID.h; sourceTree = "<group>"; };
+		FA45A9D218A5881700773C69 /* UBTransportScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportScanner.h; sourceTree = "<group>"; };
+		FA45A9D318A5881700773C69 /* UBTransportScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportScanner.m; sourceTree = "<group>"; };
+		FA45A9D518A5883E00773C69 /* UBTransportServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportServer.h; sourceTree = "<group>"; };
+		FA45A9D618A5883E00773C69 /* UBTransportServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportServer.m; sourceTree = "<group>"; };
+		FA45A9DB18A5AD9200773C69 /* UBTransportUDPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportUDPServer.h; sourceTree = "<group>"; };
+		FA45A9DC18A5AD9200773C69 /* UBTransportUDPServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportUDPServer.m; sourceTree = "<group>"; };
+		FA45AA0218A5CBF600773C69 /* UBTransportUDPConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportUDPConnector.h; sourceTree = "<group>"; };
+		FA45AA0318A5CBF600773C69 /* UBTransportUDPConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportUDPConnector.m; sourceTree = "<group>"; };
+		FA45AA0418A5CBF600773C69 /* UBTransportUDPIdentity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportUDPIdentity.h; sourceTree = "<group>"; };
+		FA45AA0518A5CBF600773C69 /* UBTransportUDPIdentity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportUDPIdentity.m; sourceTree = "<group>"; };
+		FA45AA0618A5CBF600773C69 /* UBTransportUDPScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBTransportUDPScanner.h; sourceTree = "<group>"; };
+		FA45AA0718A5CBF600773C69 /* UBTransportUDPScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBTransportUDPScanner.m; sourceTree = "<group>"; };
 		FA9AB91118A2B02100B0FCBD /* UBDisplaySocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UBDisplaySocket.h; sourceTree = "<group>"; };
 		FA9AB91218A2B02100B0FCBD /* UBDisplaySocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UBDisplaySocket.m; sourceTree = "<group>"; };
 		FAC7097718A1A1B2001F60A6 /* UmbilicalControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UmbilicalControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -306,8 +324,28 @@
 		FA2C34F618A5879000F7021C /* Transport Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				FA45AA0118A5CBF600773C69 /* UDP Scanner */,
+				FA45A9D218A5881700773C69 /* UBTransportScanner.h */,
+				FA45A9D318A5881700773C69 /* UBTransportScanner.m */,
+				FA45A9D518A5883E00773C69 /* UBTransportServer.h */,
+				FA45A9D618A5883E00773C69 /* UBTransportServer.m */,
+				FA45A9DB18A5AD9200773C69 /* UBTransportUDPServer.h */,
+				FA45A9DC18A5AD9200773C69 /* UBTransportUDPServer.m */,
 			);
 			path = "Transport Discovery";
+			sourceTree = "<group>";
+		};
+		FA45AA0118A5CBF600773C69 /* UDP Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				FA45AA0618A5CBF600773C69 /* UBTransportUDPScanner.h */,
+				FA45AA0718A5CBF600773C69 /* UBTransportUDPScanner.m */,
+				FA45AA0218A5CBF600773C69 /* UBTransportUDPConnector.h */,
+				FA45AA0318A5CBF600773C69 /* UBTransportUDPConnector.m */,
+				FA45AA0418A5CBF600773C69 /* UBTransportUDPIdentity.h */,
+				FA45AA0518A5CBF600773C69 /* UBTransportUDPIdentity.m */,
+			);
+			path = "UDP Scanner";
 			sourceTree = "<group>";
 		};
 		FAC7097D18A1A1B2001F60A6 /* UmbilicalControl */ = {
@@ -542,11 +580,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2C34E218A578F900F7021C /* UBDisplaySocket.m in Sources */,
+				FA45A9D718A5883E00773C69 /* UBTransportServer.m in Sources */,
+				FA45A9DD18A5AD9200773C69 /* UBTransportUDPServer.m in Sources */,
+				FA45A9D418A5881700773C69 /* UBTransportScanner.m in Sources */,
+				FA45AA0818A5CBF600773C69 /* UBTransportUDPConnector.m in Sources */,
 				FA2C34BC18A578E200F7021C /* main.m in Sources */,
 				FA2C34F918A5879000F7021C /* UBTransportPacket.m in Sources */,
 				FA2C34F718A5879000F7021C /* UBTCPTransport.m in Sources */,
 				FA2C34F818A5879000F7021C /* UBTransport.m in Sources */,
+				FA45AA0A18A5CBF600773C69 /* UBTransportUDPScanner.m in Sources */,
 				FA2C34C318A578E200F7021C /* UBAppDelegate.m in Sources */,
+				FA45AA0918A5CBF600773C69 /* UBTransportUDPIdentity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1029,6 +1073,7 @@
 				FA2C34DC18A578E200F7021C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FAC709A718A1A1B2001F60A6 /* Build configuration list for PBXNativeTarget "UmbilicalControl" */ = {
 			isa = XCConfigurationList;
